@@ -1,1 +1,1 @@
-# BjarnikInteractive.github.io
+Graphical Visualisation Technologies, Master Medieninformatik, TH Lübeck
