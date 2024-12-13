@@ -139,6 +139,10 @@ footer {
         font-size: 1.5rem;
     }
 
+    p, ul, li, a
+        font-size: 1rem;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -148,10 +152,4 @@ footer {
         font-size: 0.9rem;
         padding: 8px 12px;
     }
-}
-
-a:focus,
-button:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
 }
