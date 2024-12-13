@@ -94,14 +94,14 @@
     <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Dennoch kann keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernommen werden. Haftungsansprüche gegen den Betreiber, die sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung der angebotenen Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verhalten vorliegt.</p>
   </div>
 
-  <footer>
-    <a href="/">Home</a>
-    <a href="imprint.html">Imprint</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <p>&copy; 2024 Bjarnik Interactive. All rights reserved.</p>
-    <p><a href="mailto:bjarnikinteractive@gmail.com">Contact us</a></p>
-  </footer>
+  <script>
+    // Footer aus externem HTML laden
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
