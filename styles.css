@@ -49,16 +49,20 @@ a:hover {
   margin-bottom: 60px;
 }
 
+canvas {
+  width: 100%;
+  display: block;
+}
 
 footer {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 40px 20px; /* Mehr Padding für besseren Abstand */
   text-align: center;
   width: 100%;
   position: relative;
   bottom: 0;
-  margin-top: auto;
+  margin-top: auto; /* Stellt sicher, dass der Footer immer am Ende der Seite bleibt */
 }
 
 footer .footer-content {
@@ -66,12 +70,15 @@ footer .footer-content {
   justify-content: center;
   gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Für mobile Geräte: Inhalt wird nebeneinander angezeigt, wenn genug Platz ist */
 }
 
 footer a {
   color: white;
   text-decoration: none;
+  font-size: 18px; /* Größere Schrift für bessere Lesbarkeit */
+  padding: 10px 15px; /* Mehr Abstand für bessere Klickbarkeit */
+  display: inline-block; /* Macht die Links anklickbar */
 }
 
 footer a:hover {
@@ -80,23 +87,18 @@ footer a:hover {
 
 footer .footer-contact {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px; /* Etwas größere Schrift für Kontakt im Footer */
 }
 
 footer .footer-contact p {
   margin: 5px 0;
-  font-size: 12px;
+  font-size: 14px; /* Etwas größere Schrift für Kontaktinfos */
 }
 
-/* Canvas */
-canvas {
-  width: 100%;
-  display: block;
-}
-
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   h1 {
-    font-size: 24px; 
+    font-size: 24px; /* Kleinere Schrift für mobile Geräte */
   }
 
   h2 {
@@ -109,36 +111,38 @@ canvas {
 
   footer .footer-content {
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Zentriert Footer-Links auf kleinen Bildschirmen */
   }
 
   footer .footer-contact {
-    font-size: 12px; 
+    font-size: 16px; /* Größere Schrift für Kontaktinfos */
   }
 
   footer .footer-contact p {
-    font-size: 10px; 
+    font-size: 14px; /* Noch größere Schrift für Kontaktinfos */
+  }
+
+  footer a {
+    font-size: 16px; /* Größere Schrift für Links auf mobilen Geräten */
+    padding: 12px 20px; /* Mehr Abstand für bessere Klickbarkeit */
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 20px; 
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
   footer {
-    padding: 15px; 
+    padding: 30px 15px; /* Weniger Padding für Handys, aber immer noch ausreichend */
   }
 
   footer .footer-content {
-    gap: 10px; 
+    gap: 15px; /* Weniger Abstand zwischen den Links */
+  }
+
+  footer a {
+    font-size: 16px; /* Größere Schrift für Links */
+    padding: 10px 15px; /* Weniger Abstand für mobile Geräte */
   }
 
   footer .footer-contact p {
-    font-size: 10px;
+    font-size: 12px; /* Noch kleinere Schrift für Kontaktinfos */
   }
 }
