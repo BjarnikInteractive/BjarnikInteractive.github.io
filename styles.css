@@ -1,0 +1,34 @@
+/* styles.css */
+footer {
+  background-color: #333; /* Dunkelgrauer Hintergrund */
+  color: white; /* Weißer Text */
+  text-align: center;
+  padding: 20px 0; /* Polsterung oben und unten */
+}
+
+footer .footer-content {
+  display: flex; /* Flexbox für die Anordnung der Links */
+  justify-content: center; /* Zentriert die Links */
+  gap: 20px; /* Abstand zwischen den Links */
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-contact {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Optional: Hier für eine zusätzliche kleinere Textfarbe */
+footer .footer-contact p {
+  margin: 5px 0;
+  font-size: 12px;
+}
