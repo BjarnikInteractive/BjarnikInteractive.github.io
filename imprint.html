@@ -1,160 +1,47 @@
-:root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #f0f0f0;
-    --accent-color: #00b386;
-    --accent-hover: #00d9a3;
-    --neon-pink: #ff00ff;
-    --border-radius: 8px;
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --font-family: 'Roboto', sans-serif;
-    --heading-font: 'Oswald', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: var(--font-family);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 20px;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--accent-color);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 2rem;
-}
-
-p, ul, li {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    display: inline-block; 
-    text-align: center; 
-}
-
-a:hover {
-    color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 179, 134, 0.1);
-    text-decoration: none;
-}
-
-.section {
-    margin-bottom: 3rem;
-    background-color: #282828;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-}
-
-canvas {
-    width: 100%;
-    display: block;
-    border-radius: var(--border-radius);
-    max-width: 100%; /* Ensure canvas scales down */
-    height: auto; /* Maintain aspect ratio */
-}
-
-footer {
-    background-color: #111;
-    color: #888;
-    padding: 3rem 2rem;
-    text-align: center;
-    margin-top: auto;
-    border-top: 4px solid var(--accent-color);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-}
-
-.footer-link {
-    color: #ccc;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: var(--border-radius);
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
-    display: inline-block;
-}
-
-.footer-link:hover {
-    color: white;
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
-.highlight {
-    color: var(--neon-pink);
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 10px; 
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p, ul, li {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: 1.5rem;
-    }
-
-    footer {
-        padding: 2rem 1rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imprint / Impressum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Imprint</h1>
+  <!-- English Version -->
+  <div class="section">
+    <h2>Legal Information</h2>
+    <p><strong>Name:</strong> Bjarnik Interactive</p>
+    <p><strong>Represented by:</strong> Bjarne Niklas Luttermann (Owner)</p>
+    <p><strong>Address:</strong> Julius-Brecht-Str. 9a, 23560 Lübeck, Germany</p>
+    <p><strong>Email:</strong> <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
+    <p><strong>Responsible for content according to § 55 Abs. 2 RStV:</strong></p>
+    <p>Bjarne Niklas Luttermann, Julius-Brecht-Str. 9a, 23560 Lübeck, Germany</p>
+    <p><strong>Disclaimer:</strong></p>
+    <p>The content of this website was created with the utmost care. However, no warranty is given for the completeness, accuracy, and timeliness of the information. Liability claims against the author, which refer to damages of a material or immaterial nature caused by the use of the information provided, are excluded, unless there is evidence of willful or grossly negligent behavior.</p>
+  </div>
+  <h1>Impressum</h1>
+  <!-- German Version -->
+  <div class="section">
+    <h2>Rechtliche Informationen</h2>
+    <p><strong>Name:</strong> Bjarnik Interactive</p>
+    <p><strong>Vertreten durch:</strong> Bjarne Niklas Luttermann (Inhaber)</p>
+    <p><strong>Adresse:</strong> Julius-Brecht-Str. 9a, 23560 Lübeck, Deutschland</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
+    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong></p>
+    <p>Bjarne Niklas Luttermann, Julius-Brecht-Str. 9a, 23560 Lübeck, Deutschland</p>
+    <p><strong>Haftungsausschluss:</strong></p>
+    <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Dennoch kann keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernommen werden. Haftungsansprüche gegen den Betreiber, die sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung der angebotenen Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verhalten vorliegt.</p>
+  </div>
+  
+  <div id="footer-container"></div>
+  
+  <script>
+    // Footer aus externem HTML laden
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
