@@ -17,6 +17,8 @@ main {
 
 h1, h2 {
   color: #007acc;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 h1 {
