@@ -3,11 +3,11 @@
     --secondary-color: #f0f0f0;
     --accent-color: #00b386;
     --accent-hover: #00d9a3;
-    --neon-pink: #ff00ff;
     --border-radius: 8px;
     --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     --font-family: 'Roboto', sans-serif;
     --heading-font: 'Oswald', sans-serif;
+    --base-font-size: 16px;
 }
 
 * {
@@ -27,6 +27,7 @@ body {
     padding: 20px;
     line-height: 1.6;
     overflow-x: hidden;
+    font-size: var(--base-font-size);
 }
 
 h1, h2 {
@@ -59,11 +60,12 @@ a {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    padding: 8px 12px;
+    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    padding: 10px 15px;
     border-radius: var(--border-radius);
-    display: inline-block; 
-    text-align: center; 
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
 }
 
 a:hover {
@@ -71,7 +73,6 @@ a:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 179, 134, 0.1);
-    text-decoration: none;
 }
 
 .section {
@@ -91,8 +92,8 @@ canvas {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
-    max-width: 100%; /* Ensure canvas scales down */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -135,7 +136,8 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px; 
+        padding: 10px;
+        font-size: calc(var(--base-font-size) * 0.9);
     }
 
     h1 {
@@ -146,7 +148,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    p, ul, li {
+    p, ul, li, a {
         font-size: 1rem;
     }
 
