@@ -15,7 +15,6 @@ body {
   transition: background-color 0.5s ease-in-out;
 }
 
-/* Header- und Textbereich */
 h1, h2 {
   color: #00ffcc; /* Neon-Akzent */
   padding: 0 20px;
