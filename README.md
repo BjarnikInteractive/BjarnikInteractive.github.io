@@ -1,6 +1,6 @@
 # Game Project with Android Nearby Connections API
 
-This project is a mobile game leveraging the Android Nearby Connections API, targeted for release on the Google Play Store. The associated website includes an imprint, terms of use, and privacy policy in both German and English.
+The project "Sphere of Blox" is a mobile game leveraging the Android Nearby Connections API, targeted for release on the Google Play Store. The associated website includes an imprint, terms of use, and privacy policy in both German and English.
 
 ## Project Overview
 - **Platform:** Android (Google Play Store)
