@@ -1,9 +1,13 @@
 /* styles.css */
 footer {
-  background-color: #333; /* Dunkelgrauer Hintergrund */
-  color: white; /* Weißer Text */
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
-  padding: 20px 0; /* Polsterung oben und unten */
 }
 
 footer .footer-content {
@@ -27,8 +31,13 @@ footer .footer-contact {
   font-size: 14px;
 }
 
-/* Optional: Hier für eine zusätzliche kleinere Textfarbe */
 footer .footer-contact p {
   margin: 5px 0;
   font-size: 12px;
+}
+
+canvas {
+  width: 100vw;
+  height: calc(100vh - 60px); /* Wenn der Footer 60px hoch ist */
+  display: block;
 }
