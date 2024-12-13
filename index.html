@@ -91,19 +91,14 @@
   </div>
   <canvas id="webgl-canvas"></canvas>
 
-  <footer>
-    <a href="#">Impressum</a>
-    <a href="#">Nutzungsbedingungen</a>
-    <a href="#">Datenschutz</a>
-  </footer>
-
   <script type="module">
     import * as twgl from 'https://unpkg.com/twgl.js@4.17.0/dist/4.x/twgl-full.module.js';
 
     const canvas = document.getElementById('webgl-canvas');
     const gl = canvas.getContext('webgl');
 
-    const vertexShaderSource = `
+    // Vertex Shader
+    const vertexShaderSource = 
       attribute vec4 position;
       attribute vec2 texcoord;
       uniform mat4 u_matrix;
@@ -112,35 +107,82 @@
         gl_Position = u_matrix * position;
         v_texcoord = texcoord;
       }
-    `;
+    ;
 
-    const fragmentShaderSource = `
-      precision mediump float;
-      varying vec2 v_texcoord;
-      uniform sampler2D u_texture;
-      uniform bool u_useProcedural;
-      void main() {
-        if (u_useProcedural) {
-          float size = 4.0;
-          float tx = mod(v_texcoord.x * size, 1.0);
-          float ty = mod(v_texcoord.y * size, 1.0);
-          float pattern = mod(floor(tx * 3.0) + floor(ty * 3.0), 4.0);
-          vec3 color;
-          if (pattern == 0.0) color = vec3(0.0, 0.85, 0.55);    
-          else if (pattern == 1.0) color = vec3(0.0, 0.5, 0.85);
-          else if (pattern == 2.0) color = vec3(1.0, 0.5, 0.3); 
-          else color = vec3(1.0, 1.0, 0.4);                  
-          gl_FragColor = vec4(color, 1.0);
-        } else {
-          gl_FragColor = texture2D(u_texture, v_texcoord);
-        }
+    // Fragment Shader
+    const fragmentShaderSource = 
+    precision mediump float;
+    varying vec2 v_texcoord;
+    uniform sampler2D u_texture;
+    uniform bool u_useProcedural;
+    void main() {
+      if (u_useProcedural) {
+        float size = 4.0;
+        float tx = mod(v_texcoord.x * size, 1.0);
+        float ty = mod(v_texcoord.y * size, 1.0);
+        float pattern = mod(floor(tx * 3.0) + floor(ty * 3.0), 4.0);
+
+        // Lebendige Farben
+        vec3 color;
+        if (pattern == 0.0) color = vec3(0.0, 0.85, 0.55);    
+        else if (pattern == 1.0) color = vec3(0.0, 0.5, 0.85);
+        else if (pattern == 2.0) color = vec3(1.0, 0.5, 0.3); 
+        else color = vec3(1.0, 1.0, 0.4);                  
+
+        gl_FragColor = vec4(color, 1.0);
+      } else {
+        gl_FragColor = texture2D(u_texture, v_texcoord);
       }
-    `;
+    }
+  ;
 
     const programInfo = twgl.createProgramInfo(gl, [vertexShaderSource, fragmentShaderSource]);
-    const texture = twgl.createTexture(gl, { src: 'img/torustexture.jpg' });
+    const torusBufferInfo = createTorusBufferInfo(gl, 0.5, 0.2, 32, 32);
+
+    const texture = twgl.createTexture(gl, {
+      src: 'img/torustexture.jpg',
+    });
 
     let useProceduralTexture = false;
+    let rotationZ = 0;
+    let cameraRotation = [0, 0];
+    const cameraPosition = [0, 0, 3];
+    const moveSpeed = 0.1;
+
+    function drawScene(time) {
+      twgl.resizeCanvasToDisplaySize(gl.canvas);
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+      gl.clearColor(0, 0, 0, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+      const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
+      const projectionMatrix = twgl.m4.perspective(Math.PI / 4, aspect, 0.1, 100);
+
+      const cameraMatrix = twgl.m4.identity();
+      twgl.m4.rotateY(cameraMatrix, cameraRotation[1], cameraMatrix);
+      twgl.m4.rotateX(cameraMatrix, cameraRotation[0], cameraMatrix);
+      twgl.m4.translate(cameraMatrix, cameraPosition, cameraMatrix);
+
+      const viewMatrix = twgl.m4.inverse(cameraMatrix);
+      const viewProjectionMatrix = twgl.m4.multiply(projectionMatrix, viewMatrix);
+
+      const torusMatrix = twgl.m4.rotationZ(rotationZ);
+
+      const uniforms = {
+        u_matrix: twgl.m4.multiply(viewProjectionMatrix, torusMatrix),
+        u_texture: texture,
+        u_useProcedural: useProceduralTexture,
+      };
+
+      gl.useProgram(programInfo.program);
+      twgl.setBuffersAndAttributes(gl, programInfo, torusBufferInfo);
+      twgl.setUniforms(programInfo, uniforms);
+      gl.enable(gl.DEPTH_TEST);
+      twgl.drawBufferInfo(gl, torusBufferInfo);
+
+      rotationZ += 0.01;
+      requestAnimationFrame(drawScene);
+    }
 
     document.getElementById('textureToggle').onclick = () => {
       useProceduralTexture = !useProceduralTexture;
@@ -148,6 +190,73 @@
         ? 'Wechsel zu Textur mit Bild'
         : 'Wechsel zu prozeduraler Textur';
     };
+
+    window.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'w': cameraPosition[2] -= moveSpeed; break;
+        case 's': cameraPosition[2] += moveSpeed; break;
+        case 'a': cameraPosition[0] -= moveSpeed; break;
+        case 'd': cameraPosition[0] += moveSpeed; break;
+        case 'ArrowUp': cameraRotation[0] -= 0.05; break;
+        case 'ArrowDown': cameraRotation[0] += 0.05; break;
+        case 'ArrowLeft': cameraRotation[1] -= 0.05; break;
+        case 'ArrowRight': cameraRotation[1] += 0.05; break;
+      }
+    });
+
+    requestAnimationFrame(drawScene);
+
+    function createTorusBufferInfo(gl, outerRadius, innerRadius, sides, rings) {
+      const vertices = [];
+      const textureCoords = [];
+      const indices = [];
+
+      for (let ring = 0; ring <= rings; ring++) {
+        const theta = ring * 2 * Math.PI / rings;
+        const cosTheta = Math.cos(theta);
+        const sinTheta = Math.sin(theta);
+
+        for (let side = 0; side <= sides; side++) {
+          const phi = side * 2 * Math.PI / sides;
+          const cosPhi = Math.cos(phi);
+          const sinPhi = Math.sin(phi);
+
+          const x = (outerRadius + innerRadius * cosPhi) * cosTheta;
+          const y = (outerRadius + innerRadius * cosPhi) * sinTheta;
+          const z = innerRadius * sinPhi;
+          vertices.push(x, y, z);
+
+          const u = ring / rings;
+          const v = side / sides;
+          textureCoords.push(u, v);
+        }
+      }
+
+      for (let ring = 0; ring < rings; ring++) {
+        for (let side = 0; side < sides; side++) {
+          const first = (ring * (sides + 1)) + side;
+          const second = first + sides + 1;
+
+          indices.push(first, second, first + 1);
+          indices.push(second, second + 1, first + 1);
+        }
+      }
+
+      const arrays = {
+        position: { numComponents: 3, data: vertices },
+        texcoord: { numComponents: 2, data: textureCoords },
+        indices: { numComponents: 3, data: indices },
+      };
+
+      return twgl.createBufferInfoFromArrays(gl, arrays);
+    }
   </script>
 </body>
+    <footer>
+    <a href="#">Impressum</a>
+    <a href="#">Nutzungsbedingungen</a>
+    <a href="#">Datenschutz</a>
+  </footer>
 </html>
+
+
