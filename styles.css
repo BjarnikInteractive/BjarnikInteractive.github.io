@@ -63,8 +63,6 @@ a {
   padding: 8px 12px;
   border-radius: var(--border-radius);
   display: inline-block;
-  min-width: 100px;
-  min-height: 30px; 
   text-align: center; 
 }
 
@@ -131,24 +129,4 @@ footer {
 .highlight{
     color: var(--neon-pink);
     font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p, ul, li {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  a {
-    min-width: 80px;
-    min-height: 25px; 
-  }
 }
