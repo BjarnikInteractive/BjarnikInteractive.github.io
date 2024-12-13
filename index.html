@@ -73,6 +73,8 @@
   </div>
   <canvas id="webgl-canvas"></canvas>
 
+  <div id="footer-container"></div>
+  
   <script type="module">
     import * as twgl from 'https://unpkg.com/twgl.js@4.17.0/dist/4.x/twgl-full.module.js';
 
@@ -231,13 +233,18 @@
       return twgl.createBufferInfoFromArrays(gl, arrays);
     }
 
-    // Footer aus externem HTML laden
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      });
+    // Footer laden
+    function loadFooter() {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    }
+
+    // Footer laden, wenn die Seite geladen ist
+    window.onload = loadFooter;
   </script>
 </body>
-<div id="footer-container"></div>
 </html>
