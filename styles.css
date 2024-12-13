@@ -2,6 +2,7 @@
     --primary-color: #1a1a1a;
     --secondary-color: #f0f0f0;
     --accent-color: #00b386;
+    --accent-hover: #008060;
     --border-radius: 8px;
     --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     --font-family: 'Roboto', sans-serif;
@@ -44,7 +45,7 @@ h2 {
     margin-top: 2rem;
 }
 
-p, ul, li {
+p, ul {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
@@ -53,11 +54,12 @@ a {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease; /* Transform für sanfte Effekte */
 }
 
 a:hover {
-    color: #008060;
+    color: var(--accent-hover);
+    transform: scale(1.03); /* Subtile Skalierung */
     text-decoration: underline;
 }
 
@@ -83,10 +85,11 @@ canvas {
 footer {
     background-color: #111;
     color: #888;
-    padding: 2rem;
+    padding: 3rem 2rem;
     text-align: center;
     margin-top: auto;
-    border-top: 1px solid #333;
+    border-top: 4px solid var(--accent-color); /* Trennstrich wieder hinzugefügt */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); /* Subtilerer Schatten oben */
 }
 
 .footer-content {
@@ -94,20 +97,24 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    align-items: center; /* Vertikale Zentrierung im Footer */
 }
 
 .footer-link {
     color: #ccc;
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 10px 15px; /* Mehr Platz um die Links */
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, background-color 0.3s ease; /* Sanftere Übergänge */
 }
 
 .footer-link:hover {
     color: white;
+    background-color: var(--accent-color);
 }
 
 .footer-contact {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-size: 0.9rem;
 }
 
@@ -119,6 +126,7 @@ footer {
     h1 {
         font-size: 2rem;
     }
+
     h2 {
         font-size: 1.5rem;
     }
@@ -127,12 +135,14 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .footer-link{
+        .footer-link{
       font-size: 0.9rem;
+          padding: 8px 12px; /* etwas weniger padding auf mobilen Geräten*/
     }
 }
 
-a:focus, button:focus {
+a:focus,
+button:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
