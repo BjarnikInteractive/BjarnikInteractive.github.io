@@ -60,6 +60,7 @@ a {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
     transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
     padding: 10px 15px;
     border-radius: var(--border-radius);
