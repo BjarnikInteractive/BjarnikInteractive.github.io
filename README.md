@@ -24,7 +24,7 @@ This project is a mobile game leveraging the Android Nearby Connections API, tar
 
 ## Contact
 For inquiries or business proposals, please contact us at:
-- **Email:** bjarnikinteractive@gmail.com
+- **Email:** BjarnikInteractive@gmail.com
 
 ## Disclaimer
 The developer assumes no liability for damages resulting from the use of this software. All features and services are provided "as is".
