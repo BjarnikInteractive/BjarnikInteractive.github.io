@@ -79,7 +79,7 @@
     const gl = canvas.getContext('webgl');
 
     // Vertex Shader
-    const vertexShaderSource = 
+    const vertexShaderSource = `
       attribute vec4 position;
       attribute vec2 texcoord;
       uniform mat4 u_matrix;
@@ -88,10 +88,10 @@
         gl_Position = u_matrix * position;
         v_texcoord = texcoord;
       }
-    ;
+    `;
 
     // Fragment Shader
-    const fragmentShaderSource = 
+    const fragmentShaderSource = `
     precision mediump float;
     varying vec2 v_texcoord;
     uniform sampler2D u_texture;
@@ -102,26 +102,24 @@
         float tx = mod(v_texcoord.x * size, 1.0);
         float ty = mod(v_texcoord.y * size, 1.0);
         float pattern = mod(floor(tx * 3.0) + floor(ty * 3.0), 4.0);
-
         // Lebendige Farben
         vec3 color;
         if (pattern == 0.0) color = vec3(0.0, 0.85, 0.55);    
         else if (pattern == 1.0) color = vec3(0.0, 0.5, 0.85);
         else if (pattern == 2.0) color = vec3(1.0, 0.5, 0.3); 
         else color = vec3(1.0, 1.0, 0.4);                  
-
         gl_FragColor = vec4(color, 1.0);
       } else {
         gl_FragColor = texture2D(u_texture, v_texcoord);
       }
     }
-  ;
+  `;
 
     const programInfo = twgl.createProgramInfo(gl, [vertexShaderSource, fragmentShaderSource]);
     const torusBufferInfo = createTorusBufferInfo(gl, 0.5, 0.2, 32, 32);
 
     const texture = twgl.createTexture(gl, {
-      src: 'img/torustexture.jpg',
+      src: './img/torustexture.jpg',
     });
 
     let useProceduralTexture = false;
