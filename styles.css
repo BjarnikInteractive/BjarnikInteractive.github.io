@@ -16,7 +16,7 @@ body {
 }
 
 h1, h2 {
-  color: #00ffcc; /* Neon-Akzent */
+  color: #00ffcc; 
   padding: 0 20px;
   text-shadow: 1px 1px 5px rgba(0, 255, 204, 0.7);
 }
@@ -44,7 +44,6 @@ p, ul {
   line-height: 1.8;
 }
 
-/* Interaktive Links */
 a {
   color: #ff00ff; 
   text-decoration: none;
@@ -76,7 +75,6 @@ canvas {
   border-radius: 12px;
 }
 
-/* Footer */
 footer {
   background-color: #111;
   color: white;
@@ -109,7 +107,7 @@ footer a {
 }
 
 footer a:hover {
-  background-color: #00ffcc; /* Neon-Akzent */
+  background-color: #00ffcc;
 }
 
 footer .footer-contact {
