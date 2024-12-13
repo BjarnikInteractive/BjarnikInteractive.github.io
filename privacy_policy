@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy / Datenschutzerklärung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #007acc;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+    }
+    p, ul {
+      margin: 10px 0;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+<!-- Privacy Policy (English) -->
+<div class="section" id="privacy-policy">
+  <h1>Privacy Policy</h1>
+
+  <h2>1. General Information</h2>
+  <p>We take the protection of your personal data seriously. This Privacy Policy explains what data we collect during the use of our app and how it is processed.</p>
+
+  <h2>2. Data Collection</h2>
+  <p><strong>Automatically Collected Data:</strong></p>
+  <ul>
+    <li>Device information (model, operating system, version number)</li>
+    <li>IP addresses</li>
+    <li>Connection status and network information</li>
+    <li>Location data (if permissions are granted)</li>
+  </ul>
+
+  <h2>3. Use of Data</h2>
+  <p>The collected data is used exclusively for:</p>
+  <ul>
+    <li>Providing multiplayer functionality (via Android Nearby Connections API)</li>
+    <li>Improving app performance and stability</li>
+  </ul>
+
+  <h2>4. Third-Party Services</h2>
+  <p>Our app uses services such as:</p>
+  <ul>
+    <li><strong>Google Play Services</strong></li>
+    <li><strong>Android Nearby Connections API</strong></li>
+  </ul>
+  <p><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+
+  <h2>5. Your Rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Request information about stored data</li>
+    <li>Request correction or deletion of inaccurate data (if technically feasible)</li>
+  </ul>
+
+  <h2>6. Changes</h2>
+  <p>We reserve the right to update this Privacy Policy if necessary. Changes will be published on this page.</p>
+
+  <h2>Contact</h2>
+  <p><strong>E-Mail:</strong> info@beispielspiel.de</p>
+</div>
+
+<!-- Datenschutzerklärung (Deutsch) -->
+<div class="section" id="datenschutz">
+  <h1>Datenschutzerklärung</h1>
+
+  <h2>1. Allgemeine Informationen</h2>
+  <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung erklärt, welche Daten wir während der Nutzung unserer App erheben und wie sie verarbeitet werden.</p>
+
+  <h2>2. Datenerfassung</h2>
+  <p><strong>Automatisch gesammelte Daten:</strong></p>
+  <ul>
+    <li>Geräteinformationen (Modell, Betriebssystem, Versionsnummer)</li>
+    <li>IP-Adressen</li>
+    <li>Verbindungsstatus und Netzwerkinformationen</li>
+    <li>Standortdaten (falls Berechtigungen erteilt)</li>
+  </ul>
+
+  <h2>3. Verwendung der Daten</h2>
+  <p>Die gesammelten Daten dienen ausschließlich:</p>
+  <ul>
+    <li>Der Bereitstellung von Multiplayer-Funktionen (über Android Nearby Connections API)</li>
+    <li>Der Verbesserung der App-Performance und Stabilität</li>
+  </ul>
+
+  <h2>4. Dienste Dritter</h2>
+  <p>Unsere App verwendet Dienste wie:</p>
+  <ul>
+    <li><strong>Google Play Services</strong></li>
+    <li><strong>Android Nearby Connections API</strong></li>
+  </ul>
+  <p><a href="https://policies.google.com/privacy" target="_blank">Datenschutzrichtlinie von Google</a></p>
+
+  <h2>5. Ihre Rechte</h2>
+  <p>Sie haben das Recht auf:</p>
+  <ul>
+    <li>Auskunft über gespeicherte Daten</li>
+    <li>Korrektur oder Löschung ungenauer Daten (sofern technisch möglich)</li>
+  </ul>
+
+  <h2>6. Änderungen</h2>
+  <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Änderungen werden auf dieser Seite veröffentlicht.</p>
+
+  <h2>Kontakt</h2>
+  <p><strong>E-Mail:</strong> info@beispielspiel.de</p>
+</div>
+
+</body>
+</html>
