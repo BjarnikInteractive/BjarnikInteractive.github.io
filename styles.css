@@ -2,7 +2,6 @@
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -11,9 +10,9 @@ footer {
 }
 
 footer .footer-content {
-  display: flex; /* Flexbox für die Anordnung der Links */
-  justify-content: center; /* Zentriert die Links */
-  gap: 20px; /* Abstand zwischen den Links */
+  display: flex; 
+  justify-content: center;
+  gap: 20px;
   align-items: center;
 }
 
@@ -38,6 +37,6 @@ footer .footer-contact p {
 
 canvas {
   width: 100vw;
-  height: calc(100vh - 60px); /* Wenn der Footer 60px hoch ist */
+  height: calc(100vh - 60px);
   display: block;
 }
