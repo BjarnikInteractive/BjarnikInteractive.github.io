@@ -9,6 +9,14 @@
   <div id="navbar-container"></div>
   <h1>Thank you for your message!</h1>
   <p>We'll get back to you shortly.</p>
-
+  <div id="footer-container"></div>
+  <script>
+    // Footer aus externem HTML laden
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
 </body>
 </html>
