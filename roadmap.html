@@ -115,7 +115,13 @@
 
   <div id="footer-container"></div>
   <script>
-    // Load footer from external HTML
+    // Navbar und Footer aus externem HTML laden
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
