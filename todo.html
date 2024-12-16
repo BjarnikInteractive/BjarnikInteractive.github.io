@@ -1,129 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Board - To Do</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Board</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main class="board-container">
-    <section class="board-column">
-        <h2>To Do / Development Board</h2>
-        <ul class="task-list">
-            <li>
-                <h3>1. Project Setup & Environment</h3>
-                <p>Set up the development environment, version control (Git), and project structure.</p>
-            </li>
-            <li>
-                <h3>2. Game Concept & Design Documentation</h3>
-                <p>Document the overall game design, including mechanics, art style, and gameplay features.</p>
-            </li>
-            <li>
-                <h3>3. Core Game Mechanics Development</h3>
-                <p>Implement basic gameplay loop, ball physics, and movement mechanics for the player character.</p>
-            </li>
-            <li>
-                <h3>4. BlockDestroyer/SeedGenerator (Pre-Game)</h3>
-                <p>Develop the BlockDestroyer game mode where players remove blocks to generate seeds for the main game.</p>
-            </li>
-            <li>
-                <h3>5. Procedural World Generation System</h3>
-                <p>Develop the seed-based procedural world generation system for dynamic level creation.</p>
-            </li>
-            <li>
-                <h3>6. 2D/3D View Toggle</h3>
-                <p>Implement the ability to switch between 2D and 3D views for world exploration.</p>
-            </li>
-            <li>
-                <h3>7. Basic AI Behavior Implementation</h3>
-                <p>Implement basic AI behavior for NPC interactions, such as following or avoiding the player.</p>
-            </li>
-            <li>
-                <h3>8. Game Modes Implementation</h3>
-                <p>Develop and implement the four game modes: Pyramid, FlatWorld, Maze, and CustomEditor.</p>
-            </li>
-            <li>
-                <h3>9. Chunk Color & Block Interaction System</h3>
-                <p>Develop a system for interacting with color-coded chunks and manipulating the game world through these interactions.</p>
-            </li>
-            <li>
-                <h3>10. Basic UI Implementation</h3>
-                <p>Create a basic user interface for gameplay control (buttons, menus, etc.).</p>
-            </li>
-            <li>
-                <h3>11. First Level Design</h3>
-                <p>Design and implement the first level with basic environmental elements and initial game mechanics.</p>
-            </li>
-            <li>
-                <h3>12. Camera System Development</h3>
-                <p>Develop the camera system to follow the player, including dynamic zoom and movement based on player size.</p>
-            </li>
-            <li>
-                <h3>13. Bluetooth Multiplayer Integration</h3>
-                <p>Integrate Bluetooth functionality for local multiplayer support, allowing devices to connect and play together.</p>
-            </li>
-            <li>
-                <h3>14. Seed Generation & World Reproducibility</h3>
-                <p>Ensure that world generation is based on seeds, allowing players to recreate the same world with the same input.</p>
-            </li>
-            <li>
-                <h3>15. Performance Optimization (Chunk System)</h3>
-                <p>Implement optimizations to ensure smooth performance when rendering large levels and chunks of the world.</p>
-            </li>
-            <li>
-                <h3>16. First Playable Prototype</h3>
-                <p>Create and test a basic playable prototype of the game that includes movement, world generation, and basic AI.</p>
-            </li>
-            <li>
-                <h3>17. Initial Playtesting & Feedback</h3>
-                <p>Conduct initial playtests, collect feedback, and identify bugs or gameplay issues to improve.</p>
-            </li>
-            <li>
-                <h3>18. Game World Interactivity Refinement</h3>
-                <p>Refine the chunk interaction system, improving how the player can edit and modify the game world.</p>
-            </li>
-            <li>
-                <h3>19. AI Behavior Optimization</h3>
-                <p>Improve AI behavior, including pathfinding, decision-making, and dynamic reactions to the player.</p>
-            </li>
-            <li>
-                <h3>20. Audio Integration</h3>
-                <p>Integrate basic sound effects and background music to enhance the player experience.</p>
-            </li>
-        </ul>
-    </section>
+  <main>
+    <h1>Project Board</h1>
 
-    <section class="board-column">
+    <div class="board-container">
+      <div class="board-column" id="todo">
+        <h2>To Do</h2>
+
+        <div class="task-card">
+          <h3>1. Project Setup & Environment</h3>
+          <p>Set up the development environment, version control (Git), and project structure.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>2. Game Concept & Design Documentation</h3>
+          <p>Document the overall game design, including mechanics, art style, and gameplay features.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>3. Core Game Mechanics Development</h3>
+          <p>Implement basic gameplay loop, ball physics, and movement mechanics for the player character.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>4. BlockDestroyer/SeedGenerator (Pre-Game)</h3>
+          <p>Develop the BlockDestroyer game mode where players remove blocks to generate seeds for the main game.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>5. Procedural World Generation System</h3>
+          <p>Develop the seed-based procedural world generation system for dynamic level creation.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>6. 2D/3D View Toggle</h3>
+          <p>Implement the ability to switch between 2D and 3D views for world exploration.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>7. Basic AI Behavior Implementation</h3>
+          <p>Implement basic AI behavior for NPC interactions, such as following or avoiding the player.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>8. Game Modes Implementation</h3>
+          <p>Develop and implement the four game modes: Pyramid, FlatWorld, Maze, and CustomEditor.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>9. Chunk Color & Block Interaction System</h3>
+          <p>Develop a system for interacting with color-coded chunks and manipulating the game world through these interactions.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>10. Basic UI Implementation</h3>
+          <p>Create a basic user interface for gameplay control (buttons, menus, etc.).</p>
+        </div>
+
+        <div class="task-card">
+          <h3>11. First Level Design</h3>
+          <p>Design and implement the first level with basic environmental elements and initial game mechanics.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>12. Camera System Development</h3>
+          <p>Develop the camera system to follow the player, including dynamic zoom and movement based on player size.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>13. Bluetooth Multiplayer Integration</h3>
+          <p>Integrate Bluetooth functionality for local multiplayer support, allowing devices to connect and play together.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>14. Seed Generation & World Reproducibility</h3>
+          <p>Ensure that world generation is based on seeds, allowing players to recreate the same world with the same input.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>15. Performance Optimization (Chunk System)</h3>
+          <p>Implement optimizations to ensure smooth performance when rendering large levels and chunks of the world.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>16. First Playable Prototype</h3>
+          <p>Create and test a basic playable prototype of the game that includes movement, world generation, and basic AI.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>17. Initial Playtesting & Feedback</h3>
+          <p>Conduct initial playtests, collect feedback, and identify bugs or gameplay issues to improve.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>18. Game World Interactivity Refinement</h3>
+          <p>Refine the chunk interaction system, improving how the player can edit and modify the game world.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>19. AI Behavior Optimization</h3>
+          <p>Improve AI behavior, including pathfinding, decision-making, and dynamic reactions to the player.</p>
+        </div>
+
+        <div class="task-card">
+          <h3>20. Audio Integration</h3>
+          <p>Integrate basic sound effects and background music to enhance the player experience.</p>
+        </div>
+
+      </div>
+
+      <div class="board-column" id="in-progress">
         <h2>In Progress</h2>
-        <ul class="task-list">
-            <!-- Dynamically updated as tasks progress -->
-        </ul>
-    </section>
+        <!-- Noch leer -->
+      </div>
 
-    <section class="board-column">
+      <div class="board-column" id="review">
         <h2>Review</h2>
-        <ul class="task-list">
-            <!-- Dynamically updated after tasks are completed -->
-        </ul>
-    </section>
+        <!-- Noch leer -->
+      </div>
 
-    <section class="board-column">
+      <div class="board-column" id="done">
         <h2>Done</h2>
-        <ul class="task-list">
-            <!-- Completed tasks appear here -->
-        </ul>
-    </section>
-</main>
+        <!-- Noch leer -->
+      </div>
+    </div>
+  </main>
 
-<script>
+  <script>
     // Footer aus externem HTML laden
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
-        document.body.insertAdjacentHTML('beforeend', data);
+        document.getElementById('footer-container').innerHTML = data;
       });
-</script>
-
+  </script>
 </body>
 </html>
