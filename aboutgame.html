@@ -8,12 +8,15 @@
 </head>
 <body>
   <main>
+    <!-- About the Game Section -->
     <section class="game-description">
+      <h1>About the Game</h1>
       <p>
         Immerse yourself in a dynamic 3D world where your every move matters. Guide a rolling ball through procedurally generated landscapes, shaped by color-based seeds that bring each playthrough to life in a unique way. The world is constantly changing, offering fresh challenges and surprises.
       </p>
-      <p>
-        Key Features:
+      
+      <div class="game-features">
+        <h2>Key Features:</h2>
         <ul>
           <li>Endless worlds, each uniquely generated using color sequences</li>
           <li>Interactive environment with changing blocks and strategic gameplay</li>
@@ -21,9 +24,10 @@
           <li>Intense local multiplayer battles via Bluetooth</li>
           <li>Multiple levels, each ramping up the difficulty</li>
         </ul>
-      </p>
+      </div>
     </section>
 
+    <!-- Gameplay Section -->
     <section class="gameplay">
       <h2>Gameplay Highlights</h2>
       <ul>
@@ -35,6 +39,7 @@
       </ul>
     </section>
 
+    <!-- Development Section -->
     <section class="development">
       <h2>Behind the Game</h2>
       <p>
@@ -43,8 +48,11 @@
     </section>
   </main>
 
+  <!-- Footer Section (dynamically loaded) -->
+  <div id="footer-container"></div>
+
   <script>
-    // Footer aus externem HTML laden
+    // Dynamically load footer content from an external HTML file
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
