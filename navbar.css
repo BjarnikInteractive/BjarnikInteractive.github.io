@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 15px 20px;
+  background-color: #000; /* Hintergrundfarbe der Navbar auf schwarz gesetzt */
   color: #fff;
   position: fixed;
   top: 0;
@@ -12,16 +12,11 @@
   z-index: 1000;
 }
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 18px;
-}
-
 .navbar .logo {
   font-size: 24px;
   font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar ul {
@@ -32,22 +27,33 @@
 }
 
 .navbar ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Hover-Effekte */
 .navbar ul li a:hover {
-  color: #ff6347; /* Oder eine andere Hover-Farbe */
+  background-color: #006F77; /* Petrol Hover-Effekt */
+  border-radius: 5px;
 }
 
-/* Hamburger-Menü (mobile first) */
+/* Hamburger-Menü */
 .hamburger {
   display: none;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .hamburger span {
   display: block;
-  width: 25px;
+  width: 30px;
   height: 4px;
   background-color: #fff;
   margin: 5px 0;
@@ -61,10 +67,10 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: #333;
-    width: 200px;
+    background-color: #000;
+    width: 250px;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
 
   .navbar ul.active {
@@ -72,9 +78,14 @@
   }
 
   .navbar ul li {
-    padding: 10px 0;
-    text-align: center;
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar ul li a:hover {
+    background-color: #006F77; /* Petrol Hover-Effekt */
+    border-radius: 5px;
   }
 
   .hamburger {
