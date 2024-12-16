@@ -74,33 +74,34 @@ body {
     margin-bottom: 1rem;
 }
 
-.changelog-entry h3 {
-    font-size: 1.5rem;
+.changelog-entry h2 {
+    font-size: 1.8rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.changelog-entry p {
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-}
-
-.changelog-entry .version-date, .changelog-entry .developer-name {
+.changelog-entry .version-date,
+.changelog-entry .developer-name {
     font-size: 1rem;
     color: #ccc;
     margin-top: 1rem;
 }
 
-/* General Layout for Changelog */
-.changelog-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.changelog-entry .version-date strong,
+.changelog-entry .developer-name strong {
+    color: var(--secondary-color);
 }
 
-/* Media Queries */
+.changelog-entry ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .changelog-container {
-        gap: 1rem;
+    .changelog-entry {
+        padding: 1rem;
     }
 }
