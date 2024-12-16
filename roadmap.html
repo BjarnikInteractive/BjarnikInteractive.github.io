@@ -3,122 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Board</title>
+  <title>Project Roadmap</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script src="navbar.js" defer></script>
 </head>
 <body>
+  <nav id="navbar-container"></nav>
+
   <main>
-    <h1>Project Board</h1>
+    <h1>Project Roadmap</h1>
 
     <div class="board-container">
-      <!-- Todo Column -->
-      <div class="board-column" id="todo">
-        <h2>To Do</h2>
-        <!-- Aufgaben -->
-        <div class="task-card">
-          <h3>1. Project Setup & Environment</h3>
-          <p>Set up the development environment, version control (Git), and project structure.</p>
+      <!-- Immediate Tasks (Red) -->
+      <div class="board-column red" id="immediate-tasks">
+        <h2>Upcoming</h2>
+        <div class="task-card" id="GW-01">
+          <h3>GW-01: Procedural World Generation System</h3>
+          <p>Development of the procedural world generation system for dynamic level creation.</p>
         </div>
-        <div class="task-card">
-          <h3>2. Game Concept & Design Documentation</h3>
-          <p>Document the overall game design, including mechanics, art style, and gameplay features.</p>
+        <div class="task-card" id="UI-01">
+          <h3>UI-01: Basic UI Implementation</h3>
+          <p>Creation of a simple user interface for controlling the game.</p>
         </div>
-        <div class="task-card">
-          <h3>3. Core Game Mechanics Development</h3>
-          <p>Implement basic gameplay loop, ball physics, and movement mechanics for the player character.</p>
+        <div class="task-card" id="AI-01">
+          <h3>AI-01: Basic AI Behavior Implementation</h3>
+          <p>Implementation of basic AI behavior for NPC interactions.</p>
         </div>
-        <div class="task-card">
-          <h3>4. BlockDestroyer/SeedGenerator (Pre-Game)</h3>
-          <p>Develop the BlockDestroyer game mode where players remove blocks to generate seeds for the main game.</p>
+        <div class="task-card" id="MP-01">
+          <h3>MP-01: Bluetooth Multiplayer Integration</h3>
+          <p>Integration of Bluetooth for local multiplayer support.</p>
         </div>
-        <div class="task-card">
-          <h3>5. Procedural World Generation System</h3>
-          <p>Develop the seed-based procedural world generation system for dynamic level creation.</p>
-        </div>
-        <div class="task-card">
-          <h3>6. 2D/3D View Toggle</h3>
-          <p>Implement the ability to switch between 2D and 3D views for world exploration.</p>
-        </div>
-        <div class="task-card">
-          <h3>7. Basic AI Behavior Implementation</h3>
-          <p>Implement basic AI behavior for NPC interactions, such as following or avoiding the player.</p>
-        </div>
-        <div class="task-card">
-          <h3>8. Game Modes Implementation</h3>
-          <p>Develop and implement the four game modes: Pyramid, FlatWorld, Maze, and CustomEditor.</p>
-        </div>
-        <div class="task-card">
-          <h3>9. Chunk Color & Block Interaction System</h3>
-          <p>Develop a system for interacting with color-coded chunks and manipulating the game world through these interactions.</p>
-        </div>
-        <div class="task-card">
-          <h3>10. Basic UI Implementation</h3>
-          <p>Create a basic user interface for gameplay control (buttons, menus, etc.).</p>
-        </div>
-        <div class="task-card">
-          <h3>11. First Level Design</h3>
-          <p>Design and implement the first level with basic environmental elements and initial game mechanics.</p>
-        </div>
-        <div class="task-card">
-          <h3>12. Camera System Development</h3>
-          <p>Develop the camera system to follow the player, including dynamic zoom and movement based on player size.</p>
-        </div>
-        <div class="task-card">
-          <h3>13. Bluetooth Multiplayer Integration</h3>
-          <p>Integrate Bluetooth functionality for local multiplayer support, allowing devices to connect and play together.</p>
-        </div>
-        <div class="task-card">
-          <h3>14. Seed Generation & World Reproducibility</h3>
-          <p>Ensure that world generation is based on seeds, allowing players to recreate the same world with the same input.</p>
-        </div>
-        <div class="task-card">
-          <h3>15. Performance Optimization (Chunk System)</h3>
-          <p>Implement optimizations to ensure smooth performance when rendering large levels and chunks of the world.</p>
-        </div>
-        <div class="task-card">
-          <h3>16. First Playable Prototype</h3>
-          <p>Create and test a basic playable prototype of the game that includes movement, world generation, and basic AI.</p>
-        </div>
-        <div class="task-card">
-          <h3>17. Initial Playtesting & Feedback</h3>
-          <p>Conduct initial playtests, collect feedback, and identify bugs or gameplay issues to improve.</p>
-        </div>
-        <div class="task-card">
-          <h3>18. Game World Interactivity Refinement</h3>
-          <p>Refine the chunk interaction system, improving how the player can edit and modify the game world.</p>
-        </div>
-        <div class="task-card">
-          <h3>19. AI Behavior Optimization</h3>
-          <p>Improve AI behavior, including pathfinding, decision-making, and dynamic reactions to the player.</p>
-        </div>
-        <div class="task-card">
-          <h3>20. Audio Integration</h3>
-          <p>Integrate basic sound effects and background music to enhance the player experience.</p>
+        <div class="task-card" id="PO-01">
+          <h3>PO-01: Performance Optimization (Chunk System)</h3>
+          <p>Optimization of performance for smooth rendering of large worlds and chunks.</p>
         </div>
       </div>
 
-      <!-- In Progress Column -->
-      <div class="board-column" id="in-progress">
+      <!-- In Progress (Yellow) -->
+      <div class="board-column yellow" id="in-progress">
         <h2>In Progress</h2>
-        <!-- Noch leer -->
+        <div class="task-card" id="GM-01">
+          <h3>GM-01: Game Modes Implementation</h3>
+          <p>Implementation of game modes such as Pyramid, FlatWorld, Maze, and CustomEditor.</p>
+        </div>
+        <div class="task-card" id="AE-01">
+          <h3>AE-01: Audio Integration</h3>
+          <p>Integration of sound effects and background music for enhanced player experience.</p>
+        </div>
+        <div class="task-card" id="UI-03">
+          <h3>UI-03: User Interface Overhaul</h3>
+          <p>Redesign of the user interface for a more user-friendly experience.</p>
+        </div>
+        <div class="task-card" id="PO-02">
+          <h3>PO-02: Game Optimization</h3>
+          <p>Long-term optimizations for better game speed and resource management.</p>
+        </div>
       </div>
 
-      <!-- Review Column -->
-      <div class="board-column" id="review">
-        <h2>Review</h2>
-        <!-- Noch leer -->
+      <!-- Future Features (Blue) -->
+      <div class="board-column blue" id="future-features">
+        <h2>Future Features</h2>
+        <div class="task-card" id="GW-02">
+          <h3>GW-02: Complex Level Design</h3>
+          <p>Development of more complex procedural world features and levels.</p>
+        </div>
+        <div class="task-card" id="GM-02">
+          <h3>GM-02: New Game Modes</h3>
+          <p>Introduction of new game modes like "Survival", "Creative", and "Exploration".</p>
+        </div>
+        <div class="task-card" id="MP-02">
+          <h3>MP-02: Online Multiplayer Support</h3>
+          <p>Full online multiplayer support for global connections.</p>
+        </div>
+        <div class="task-card" id="AE-02">
+          <h3>AE-02: Dynamic Sound Effects</h3>
+          <p>Enhance the audio experience with dynamic sound changes based on actions/events.</p>
+        </div>
+        <div class="task-card" id="CI-06">
+          <h3>CI-06: Community Events</h3>
+          <p>Regular community events to engage players.</p>
+        </div>
       </div>
 
-      <!-- Done Column -->
-      <div class="board-column" id="done">
-        <h2>Done</h2>
-        <!-- Noch leer -->
+      <!-- Community Ideas (Green) -->
+      <div class="board-column green" id="community-ideas">
+        <h2>Community Ideas</h2>
+        <div class="task-card" id="CI-01">
+          <h3>CI-01: New World Themes</h3>
+          <p>Ideas for new environments and themes for procedural worlds (e.g., space, underwater, etc.).</p>
+        </div>
+        <div class="task-card" id="CI-02">
+          <h3>CI-02: Game Modding Support</h3>
+          <p>Support for modding so players can create their own worlds, mechanics, or content.</p>
+        </div>
+        <div class="task-card" id="CI-03">
+          <h3>CI-03: Community-driven World Designs</h3>
+          <p>Allowing the community to create and introduce their own worlds into the game.</p>
+        </div>
+        <div class="task-card" id="CI-04">
+          <h3>CI-04: User Feedback System</h3>
+          <p>A system to gather and implement feedback from the community.</p>
+        </div>
+        <div class="task-card" id="CI-05">
+          <h3>CI-05: Multiplayer Leaderboards</h3>
+          <p>Multiplayer leaderboards to promote competition among players.</p>
+        </div>
       </div>
     </div>
   </main>
+
   <div id="footer-container"></div>
   <script>
-    // Footer aus externem HTML laden
+    // Load footer from external HTML
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
