@@ -1,0 +1,70 @@
+/* Allgemeines Styling für die Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Dunkler Hintergrund */
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling für die Links */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 0.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #555; /* Leicht helleres Hover */
+  border-radius: 5px;
+}
+
+/* Hamburger-Menü Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Mobilansicht */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Verstecke Links in der mobilen Ansicht */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #333;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .navbar ul.active {
+    display: flex; /* Zeige Menü, wenn aktiv */
+  }
+
+  .hamburger {
+    display: flex; /* Zeige Hamburger-Menü */
+  }
+}
