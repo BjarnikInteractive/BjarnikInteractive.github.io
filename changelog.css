@@ -1,0 +1,106 @@
+/* General Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Changelog and Dev Blog */
+.changelog-container, .dev-blogs-container {
+    margin-bottom: 3rem;
+}
+
+/* Dev Blogs */
+.dev-blog-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dev-blog {
+    background-color: #282828;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    width: 22%; /* 4 Spalten auf Desktop */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+}
+
+.dev-blog:hover {
+    transform: translateY(-5px);
+}
+
+.dev-blog img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.dev-blog h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.dev-blog p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .dev-blog-container {
+        flex-direction: column;
+    }
+
+    .dev-blog {
+        width: 100%; /* Auf kleinen Geräten nimmt der Dev-Blog die volle Breite */
+    }
+}
+
+/* Changelog */
+.changelog-entry {
+    background-color: #282828;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+
+.changelog-entry h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.changelog-entry p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.changelog-entry .version-date, .changelog-entry .developer-name {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+/* General Layout for Changelog */
+.changelog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .changelog-container {
+        gap: 1rem;
+    }
+}
