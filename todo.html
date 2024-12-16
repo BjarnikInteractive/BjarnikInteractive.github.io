@@ -11,7 +11,7 @@
   <div class="container">
     <h1>Game Development Kanban Board</h1>
 
-    <div class="kanban-columns">
+    <div class="kanban-board">
       <!-- To Do Column -->
       <div class="kanban-column" id="to-do">
         <h2>To Do</h2>
@@ -34,6 +34,10 @@
           <p>Create the user interface that allows the player to select between different gamemodes and levels.</p>
         </div>
         <div class="task-card">
+          <h3>Implement 2D Game Mode Toggle in Pause Menu</h3>
+          <p>Implement the feature that allows players to toggle between 2D and 3D gameplay modes from the pause menu.</p>
+        </div>
+        <div class="task-card">
           <h3>Testing Block and Chunk Interactions</h3>
           <p>Test how blocks interact and ensure chunks behave as expected when blocks are added, removed, or modified.</p>
         </div>
@@ -48,10 +52,6 @@
         <div class="task-card">
           <h3>Multiplayer Setup (Nearby Connections API)</h3>
           <p>Set up the multiplayer functionality using the Android Nearby Connections API for interaction between players.</p>
-        </div>
-        <div class="task-card">
-          <h3>Final UI Polish and Gameplay Balancing</h3>
-          <p>Refine the UI for a smoother experience and balance gameplay elements for a fun and engaging experience.</p>
         </div>
       </div>
 
@@ -74,6 +74,7 @@
       </div>
     </div>
   </div>
+
   <script>
     // Footer aus externem HTML laden
     fetch('footer.html')
