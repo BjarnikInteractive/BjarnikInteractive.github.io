@@ -1,344 +1,190 @@
-/* Grundlegende Farbvariablen */
 :root {
-    --primary-color: #f4f4f4;
+    --primary-color: #1a1a1a;
+    --secondary-color: #f0f0f0;
     --accent-color: #00b386;
-    --accent-hover: #00d9a3;
-    --text-color: #dcdcdc;
-    --background-color: #1a1a1a;
-    --border-radius: 10px;
-    --todo-color-1: #ff4c4c;  /* Rot */
-    --todo-color-2: #ffdb4c;  /* Gelb */
-    --todo-color-3: #4c8cff;  /* Blau */
-    --todo-color-4: #4cff75;  /* Grün */
+    --accent-hover: #00d9a3; 
+    --neon-pink: #ff00ff; 
+    --border-radius: 8px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Oswald', sans-serif;
+
+    /* Todo Page Colors */
+    --todo-color-1: #ff6f61;
+    --todo-color-2: #ffcc00;
+    --todo-color-3: #4caf50;
+    --todo-color-4: #00bcd4;
 }
 
-/* Grundlegende Styles für den Body */
-body {
+* {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    color: var(--text-color);
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Canvas Styles */
-canvas {
-    display: block;
-    margin: 20px auto;
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
 }
-
-/* Überschriften */
-h1, h2, h3 {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h2 {
     font-size: 2rem;
+    margin-top: 2rem;
 }
 
-h3 {
-    font-size: 1.5rem;
-}
-
-/* Link-Styles */
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(145deg, #00b386, #00d9a3);
-}
-
-/* Sektionen */
-.section {
-    background: linear-gradient(145deg, #282828, #333);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    margin-bottom: 2rem;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    opacity: 0.8;
-}
-
-/* Grid-Layout für die Todo-Spalten */
-.board-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Todo-Spalte */
-.board-column {
-    background-color: #444;
-    border-radius: var(--border-radius);
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.board-column h2 {
-    font-size: 1.5rem;
-}
-
-.board-column.todo-color-1 {
-    background-color: var(--todo-color-1);
-}
-
-.board-column.todo-color-2 {
-    background-color: var(--todo-color-2);
-}
-
-.board-column.todo-color-3 {
-    background-color: var(--todo-color-3);
-}
-
-.board-column.todo-color-4 {
-    background-color: var(--todo-color-4);
-}
-
-.card {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-/* Task Cards für die Todo-Items */
-.task-card {
-    background-color: #333;
-    border-radius: var(--border-radius);
-    padding: 1.2rem;
+p, ul, li { 
     margin-bottom: 1.5rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
 }
 
-.task-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+ul {
+    padding-left: 20px;
 }
 
-/* Button-Styles */
-button {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+a {
+  font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  text-align: center; 
 }
 
-button:hover {
-    background-color: var(--accent-hover);
-    transform: scale(1.05);
-}
-
-button i {
-    margin-right: 8px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    color: var(--primary-color);
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: var(--accent-color);
-}
-
-/* Responsive Design für mobile Geräte */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    .board-column {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-}
-
-/* Sanfte Animationen für Scrollen und Sichtbarkeit */
-html {
-    scroll-behavior: smooth;
-}
-
-.section {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Verwendung von AOS für Animationen beim Scrollen */
-.section[data-aos="fade-up"] {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-footer .footer-link i {
-    margin-right: 5px;
-}
-
-/* Vertikale Ausrichtung für Fußzeilen-Links */
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.footer-link {
-    padding: 10px 15px;
-}
-
-/* Schattierungseffekte */
-.task-card {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.task-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-}
-
-/* Sanfte Übergänge für Layout */
-.section {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
-    opacity: 0;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Grüne Farbverläufe für interaktive Elemente */
-body {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-}
-
-/* Hover-Effekt mit Farbverlauf für Links */
 a:hover {
     color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    background: linear-gradient(145deg, #00b386, #00d9a3);
-}
-
-/* Styles für die About-Game-Seite */
-.game-description, .gameplay, .development {
-    background-color: #2a2a2a; /* Dunkler Hintergrund für den About-Bereich */
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, opacity 0.5s ease;
-}
-
-.game-description {
-    background: linear-gradient(145deg, #333, #444);
-    color: var(--primary-color);
-}
-
-.gameplay {
-    background: linear-gradient(145deg, #444, #555);
-    color: var(--primary-color);
-}
-
-.development {
-    background: linear-gradient(145deg, #555, #666);
-    color: var(--primary-color);
-}
-
-/* Hover-Effekt für die About-Bereich-Sektion */
-.game-description:hover, .gameplay:hover, .development:hover {
-    transform: translateY(-5px);
-    opacity: 0.9;
-}
-
-/* Überschrift für die Abschnitte */
-.game-description h2, .gameplay h2, .development h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Text-Stile für die Abschnitte */
-.game-description p, .gameplay p, .development p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-/* Bilder innerhalb der About-Bereich-Sektion */
-.game-description img, .gameplay img, .development img {
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
-}
-
-/* Links innerhalb der About-Bereich-Sektion */
-.game-description a, .gameplay a, .development a {
-    color: var(--accent-color);
-    font-weight: bold;
+    background-color: rgba(0, 179, 134, 0.1);
     text-decoration: none;
-    transition: color 0.3s ease
+}
+
+.section {
+    margin-bottom: 3rem;
+    background-color: #282828;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+canvas {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+footer {
+    background-color: #111;
+    color: #888;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: auto;
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: white;
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Highlighted text */
+.highlight {
+    color: var(--neon-pink);
+    font-weight: bold;
+}
+
+/* Responsive Footer */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Todo Board Layout */
+.todo-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.todo-column {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Each Todo column has its own background color */
+.todo-column:nth-child(1) {
+    background-color: var(--todo-color-1);
+}
+
+.todo-column:nth-child(2) {
+    background-color: var(--todo-color-2);
+}
+
+.todo-column:nth-child(3) {
+    background-color: var(--todo-color-3);
+}
+
+.todo-column:nth-child(4) {
+    background-color: var(--todo-color-4);
+}
+
+/* Center the board on large screens */
+@media (min-width: 1024px) {
+    .todo-board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
