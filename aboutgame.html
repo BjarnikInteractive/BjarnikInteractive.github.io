@@ -8,51 +8,41 @@
 </head>
 <body>
   <main>
-    <!-- About the Game Section -->
-    <section class="game-description">
-      <h1>About the Game</h1>
+    <section class="game-description card">
+      <h2>About the Game</h2>
       <p>
-        Immerse yourself in a dynamic 3D world where your every move matters. Guide a rolling ball through procedurally generated landscapes, shaped by color-based seeds that bring each playthrough to life in a unique way. The world is constantly changing, offering fresh challenges and surprises.
+        Immerse yourself in a dynamic 3D world where your every move matters. Guide a rolling ball through procedurally generated landscapes, shaped by color-based seeds that bring each playthrough to life in a unique way.
       </p>
-      
-      <div class="game-features">
-        <h2>Key Features:</h2>
-        <ul>
-          <li>Endless worlds, each uniquely generated using color sequences</li>
-          <li>Interactive environment with changing blocks and strategic gameplay</li>
-          <li>Challenging AI-controlled balls that hunt you down</li>
-          <li>Intense local multiplayer battles via Bluetooth</li>
-          <li>Multiple levels, each ramping up the difficulty</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Gameplay Section -->
-    <section class="gameplay">
-      <h2>Gameplay Highlights</h2>
       <ul>
-        <li>Unlockable worlds with increasing complexity</li>
-        <li>Survive against AI adversaries, each with their own tactics</li>
-        <li>Manipulate the world through color interactions</li>
-        <li>Fast-paced multiplayer action with Bluetooth support for local play</li>
-        <li>Challenge yourself with progressive levels full of unexpected twists</li>
+        <li>Endless worlds, each uniquely generated using color sequences</li>
+        <li>Interactive environment with changing blocks and strategic gameplay</li>
+        <li>Challenging AI-controlled balls that hunt you down</li>
+        <li>Intense local multiplayer battles via Bluetooth</li>
+        <li>Multiple levels with increasing challenges</li>
       </ul>
     </section>
 
-    <!-- Development Section -->
-    <section class="development">
+    <section class="gameplay card">
+      <h2>Gameplay Highlights</h2>
+      <ul>
+        <li>Unlockable worlds with increasing complexity</li>
+        <li>Survive against AI adversaries with unique tactics</li>
+        <li>Manipulate the world through color interactions</li>
+        <li>Fast-paced multiplayer action with Bluetooth support</li>
+        <li>Challenge yourself with progressive levels full of surprises</li>
+      </ul>
+    </section>
+
+    <section class="development card">
       <h2>Behind the Game</h2>
       <p>
-        Crafted by Bjarnik Interactive, a small yet passionate team committed to creating fresh and exciting gaming experiences. Built using Unity, this game features cutting-edge AI, procedural world generation, and intense multiplayer mechanics to keep you on your toes.
+        Crafted by Bjarnik Interactive, a small yet passionate team committed to creating fresh and exciting gaming experiences. Built using Unity, featuring cutting-edge AI, procedural world generation, and intense multiplayer mechanics.
       </p>
     </section>
   </main>
 
-  <!-- Footer Section (dynamically loaded) -->
-  <div id="footer-container"></div>
-
   <script>
-    // Dynamically load footer content from an external HTML file
+    // Footer aus externem HTML laden
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
