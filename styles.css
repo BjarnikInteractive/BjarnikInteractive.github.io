@@ -76,6 +76,20 @@ header nav a:hover {
     background-color: rgba(0, 139, 139, 0.1); /* Hover background in petrol */
 }
 
+/* Standardzustand: Menü ist ausgeblendet */
+.navbar ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Wenn die 'active'-Klasse hinzugefügt wird, Menü einblenden */
+.navbar ul.active {
+  display: block;
+}
+
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
     header nav {
