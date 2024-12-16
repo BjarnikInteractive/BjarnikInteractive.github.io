@@ -29,12 +29,13 @@ body {
 
 /* Canvas */
 canvas {
-    background-color: #111; /* Dark background for canvas */
-    display: block;
-    margin: 20px auto;
-    border: 2px solid var(--accent-color);
-    box-shadow: var(--box-shadow);
+    width: 100vw;
+    height: 100vh; 
+    background-color: #111;
+    border: none; 
+    display: block; 
 }
+
 
 /* Main Content */
 main {
