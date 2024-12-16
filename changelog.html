@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
 
+  <main>
+    <section class="changelog-container">
+      <div class="card changelog-item">
+        <h2>Version 1.0.0 - Initial Release</h2>
+        <p><strong>Release Date:</strong> December 10, 2024</p>
+        <ul>
+          <li>Launch of the game with procedural world generation</li>
+          <li>Added AI-controlled enemies with unique behavior</li>
+          <li>Bluetooth multiplayer support</li>
+          <li>Basic world customization using color seeds</li>
+        </ul>
+      </div>
+
+      <div class="card changelog-item">
+        <h2>Version 1.1.0 - New Features</h2>
+        <p><strong>Release Date:</strong> December 15, 2024</p>
+        <ul>
+          <li>Unlockable worlds with increasing complexity</li>
+          <li>Improved AI tactics for enemies</li>
+          <li>Enhanced multiplayer experience with stability improvements</li>
+          <li>New color interaction mechanics for world manipulation</li>
+        </ul>
+      </div>
+
+      <div class="card changelog-item">
+        <h2>Version 1.2.0 - Bug Fixes</h2>
+        <p><strong>Release Date:</strong> December 18, 2024</p>
+        <ul>
+          <li>Fixed issue with multiplayer connectivity over Bluetooth</li>
+          <li>Improved performance on lower-end devices</li>
+          <li>Resolved visual bugs related to procedural world generation</li>
+          <li>UI improvements and minor visual tweaks</li>
+        </ul>
+      </div>
+
+      <div class="card changelog-item">
+        <h2>Version 1.3.0 - New Gameplay Features</h2>
+        <p><strong>Release Date:</strong> December 20, 2024</p>
+        <ul>
+          <li>Introduction of new enemy types with advanced AI</li>
+          <li>Additional levels with unique challenges</li>
+          <li>New multiplayer game modes and maps</li>
+          <li>Optimized game mechanics for a smoother gameplay experience</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Navbar und Footer aus externem HTML laden
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+
+    // Footer aus externem HTML laden
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
