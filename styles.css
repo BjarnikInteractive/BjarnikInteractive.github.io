@@ -210,83 +210,74 @@ footer a {
     padding: 8px 12px;
 }
 
-.game-description p {
-    line-height: 1.8;
-    text-align: justify;
+.to-do {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.features ul {
-    list-style-type: disc;
-}
-
-.features li {
-    margin-bottom: 1.5rem;
-}
-
-.section h2 {
-    font-size: 2.2rem;
-    color: var(--accent-color);
-}
-
-.section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.to-do-item, .about-the-game-item {
+.to-do .task {
     background-color: #333;
     border-radius: var(--border-radius);
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
     box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
-.to-do-item:hover, .about-the-game-item:hover {
+.to-do .task:hover {
     transform: translateY(-5px);
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
 }
 
-.to-do-item h3, .about-the-game-item h3 {
-    font-size: 1.5rem;
+.to-do .task h3 {
+    font-size: 1.8rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
 }
 
-.to-do-item p, .about-the-game-item p {
+.to-do .task ul {
+    padding-left: 20px;
+}
+
+.to-do .task li {
     font-size: 1.1rem;
-    color: #ddd;
     margin-bottom: 1rem;
 }
 
-.to-do-item .to-do-status, .about-the-game-item .about-the-game-status {
-    font-size: 1rem;
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: var(--accent-color);
-    font-weight: bold;
 }
 
-/* Hover effect for About the Game and To Do */
-.about-the-game, .to-do {
-    transition: transform 0.2s ease;
+.to-do .task ul li {
+    font-size: 1.1rem;
 }
 
-.about-the-game:hover, .to-do:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
-/* Kanban Board Adjustments */
-.kanban-column {
-    position: relative;
-}
+    .kanban-board {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.kanban-card {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
+    .kanban-column {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
 
-.kanban-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem;
+    }
+
+    .to-do .task {
+        padding: 1rem;
+    }
 }
