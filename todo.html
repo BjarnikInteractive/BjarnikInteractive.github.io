@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Development Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Kanban Board -->
+  <div class="container">
+    <h1>Game Development Kanban Board</h1>
+
+    <div class="kanban-columns">
+      <!-- To Do Column -->
+      <div class="kanban-column" id="to-do">
+        <h2>To Do</h2>
+        
+        <!-- Task Cards in To Do -->
+        <div class="task-card">
+          <h3>Seed Generator Creation (Color Sequences)</h3>
+          <p>Create the seed generator based on color sequences (green, blue, yellow, red) that generate predictable worlds.</p>
+        </div>
+        <div class="task-card">
+          <h3>3D World Creation (Chunks and Blocks)</h3>
+          <p>Implement a system for creating a 3D world using chunks and blocks, with support for different colors and block types.</p>
+        </div>
+        <div class="task-card">
+          <h3>World Generation with Color Sequences</h3>
+          <p>Develop the logic for world generation based on the seed colors and ensure it works consistently across different devices.</p>
+        </div>
+        <div class="task-card">
+          <h3>UI for Level and Gamemode Selection</h3>
+          <p>Create the user interface that allows the player to select between different gamemodes and levels.</p>
+        </div>
+        <div class="task-card">
+          <h3>Testing Block and Chunk Interactions</h3>
+          <p>Test how blocks interact and ensure chunks behave as expected when blocks are added, removed, or modified.</p>
+        </div>
+        <div class="task-card">
+          <h3>Implement Player Movement in 3D World</h3>
+          <p>Develop the player character's movement, allowing them to navigate the 3D world and interact with the blocks.</p>
+        </div>
+        <div class="task-card">
+          <h3>Design and Implement UI for Seed Logbook</h3>
+          <p>Build the UI for viewing the logbook, displaying generated seeds, and tracking their associated world configurations.</p>
+        </div>
+        <div class="task-card">
+          <h3>Multiplayer Setup (Nearby Connections API)</h3>
+          <p>Set up the multiplayer functionality using the Android Nearby Connections API for interaction between players.</p>
+        </div>
+        <div class="task-card">
+          <h3>Final UI Polish and Gameplay Balancing</h3>
+          <p>Refine the UI for a smoother experience and balance gameplay elements for a fun and engaging experience.</p>
+        </div>
+      </div>
+
+      <!-- In Progress Column -->
+      <div class="kanban-column" id="in-progress">
+        <h2>In Progress</h2>
+        <p>Tasks will appear here once they are being actively worked on.</p>
+      </div>
+
+      <!-- Review Column -->
+      <div class="kanban-column" id="review">
+        <h2>Review</h2>
+        <p>Tasks will appear here once they are ready for review or testing.</p>
+      </div>
+
+      <!-- Done Column -->
+      <div class="kanban-column" id="done">
+        <h2>Done</h2>
+        <p>Tasks will appear here once they are completed and tested.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
