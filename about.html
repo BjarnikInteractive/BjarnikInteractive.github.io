@@ -35,7 +35,9 @@
           <li>Challenge yourself with progressive levels full of surprises</li>
         </ul>
       </div>
+    </section>
 
+    <section class="about-us-container">
       <div class="card development">
         <h2>Behind the Game</h2>
         <p>
@@ -49,14 +51,14 @@
   <div id="footer-container"></div>
 
   <script>
-    // Navbar und Footer aus externem HTML laden
+    // Navbar and Footer loaded from external HTML
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
       });
 
-    // Footer aus externem HTML laden
+    // Footer loaded from external HTML
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
