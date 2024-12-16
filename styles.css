@@ -1,20 +1,23 @@
 :root {
-    --primary-color: #1a1a1a; /* Dark background */
-    --secondary-color: #f0f0f0; /* Light text and elements */
-    --accent-color: #008B8B; /* Petrol accent */
-    --accent-hover: #00a9a9; /* Hover color for accents */
-    --neon-pink: #ff00ff; /* Neon pink */
-    --red: #ff4d4d; /* Red for errors or warnings */
-    --yellow: #f9d342; /* Yellow for highlights */
-    --blue: #3b82f6; /* Blue for primary accents */
-    --green: #34d399; /* Green for success or highlights */
-    --border-radius: 8px; /* Rounded corners */
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    --font-family: 'Roboto', sans-serif; /* Main font */
-    --heading-font: 'Oswald', sans-serif; /* Font for headings */
+    --primary-color: #1a1a1a; /* Hintergrundfarbe */
+    --secondary-color: #f0f0f0; /* Textfarbe */
+    --accent-color: #00b386; /* Petrol-Akzentfarbe */
+    --accent-hover: #00d9a3; /* Hover-Farbe für Akzente */
+    --neon-pink: #ff00ff; /* Neon-Pink für Highlights */
+    --border-radius: 8px; /* Abgerundete Ecken */
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box-Schatten */
+    --font-family: 'Roboto', sans-serif; /* Standard-Schriftart */
+    --heading-font: 'Oswald', sans-serif; /* Schriftart für Überschriften */
 }
 
-/* General Layout */
+/* Globaler Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -27,52 +30,97 @@ body {
     overflow-x: hidden;
 }
 
-/* Canvas */
-canvas {
-    width: 100vw;
-    height: 100vh;
-    background-color: #111;
-    border: none;
-    display: block;
+/* Überschriften */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+/* Absätze und Listen */
+p, ul, li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Links */
+a {
+    font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    text-align: center;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 179, 134, 0.1);
+    text-decoration: none;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: #111;
+    color: #ccc;
+    padding: 3rem 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    margin-top: 30px;
+    margin-top: auto;
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--accent-color); /* Hover-Farbe für Links */
-}
-
-footer .social-links {
-    margin-top: 10px;
-}
-
-footer .social-links a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-}
-
-/* Main Content */
-main {
+.footer-content {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
+    align-items: center;
 }
 
-/* Cards (Reusable styles for About, Roadmap, and Changelog) */
-.card {
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: white;
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.highlight {
+    color: var(--neon-pink);
+    font-weight: bold;
+}
+
+/* Spezifische Anpassungen für die neuen HTML-Seiten (Impressum, Datenschutz, Nutzungsbedingungen) */
+section {
+    margin-bottom: 3rem;
     background-color: #282828;
     border-radius: var(--border-radius);
     padding: 2rem;
@@ -80,95 +128,57 @@ main {
     transition: transform 0.2s ease;
 }
 
-.card:hover {
+section:hover {
     transform: translateY(-5px);
 }
 
-.card h2, .card h3 {
-    font-size: 2rem;
+h1, h2 {
+    color: var(--accent-color); /* Hier wird sicher gestellt, dass alle Überschriften in Petrol erscheinen */
+}
+
+/* Anpassungen für canvas */
+canvas {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+/* Changelog Seite */
+.changelog-entry {
+    background-color: #282828;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+
+.changelog-entry h2 {
+    font-size: 1.8rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.card p, .card ul {
+.changelog-entry .version-date,
+.changelog-entry .developer-name {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.changelog-entry .version-date strong,
+.changelog-entry .developer-name strong {
+    color: var(--secondary-color);
+}
+
+.changelog-entry ul {
+    list-style-type: disc;
+    padding-left: 20px;
     font-size: 1.1rem;
     color: var(--secondary-color);
 }
 
-.card ul {
-    padding-left: 20px;
-}
-
-/* Flexbox Containers */
-.about-container, .board-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Ermöglicht das Umfließen bei kleinen Bildschirmen */
-}
-
-.about-container {
-    margin-bottom: 3rem;
-}
-
-.board-column {
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 22%;
-}
-
-.board-column h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Task Styles for Roadmap */
-.board-task {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    padding: 10px;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease;
-}
-
-.board-task:hover {
-    transform: translateY(-5px);
-}
-
-.board-column-red .board-task {
-    background-color: var(--red);
-}
-
-.board-column-yellow .board-task {
-    background-color: var(--yellow);
-}
-
-.board-column-blue .board-task {
-    background-color: var(--blue);
-}
-
-.board-column-green .board-task {
-    background-color: var(--green);
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .about-container, .board-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .board-column {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .card {
-        flex: 1 1 100%; /* Jede Karte nimmt die volle Breite auf kleinen Geräten */
+    .changelog-entry {
+        padding: 1rem;
     }
 }
