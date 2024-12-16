@@ -1,17 +1,4 @@
-/* General Layout */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: var(--font-family);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 20px;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Changelog and Dev Blog */
+/* Changelog und Dev Blog */
 .changelog-container, .dev-blogs-container {
     margin-bottom: 3rem;
 }
@@ -55,6 +42,7 @@ body {
     color: var(--secondary-color);
 }
 
+/* Responsive Design für Dev Blogs */
 @media (max-width: 768px) {
     .dev-blog-container {
         flex-direction: column;
@@ -99,7 +87,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Responsive Design */
+/* Responsive Design für Changelog */
 @media (max-width: 768px) {
     .changelog-entry {
         padding: 1rem;
