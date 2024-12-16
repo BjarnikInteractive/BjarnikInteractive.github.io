@@ -11,7 +11,13 @@
   <p>We'll get back to you shortly.</p>
   <div id="footer-container"></div>
   <script>
-    // Footer aus externem HTML laden
+    // Navbar und Footer aus externem HTML laden
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {
