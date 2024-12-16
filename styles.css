@@ -30,12 +30,39 @@ body {
 /* Canvas */
 canvas {
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
     background-color: #111;
-    border: none; 
-    display: block; 
+    border: none;
+    display: block;
 }
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-color); /* Hover-Farbe für Links */
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
 
 /* Main Content */
 main {
@@ -44,41 +71,46 @@ main {
     gap: 2rem;
 }
 
-/* Changelog Cards */
-.changelog-entry {
+/* Cards (Reusable styles for About, Roadmap, and Changelog) */
+.card {
     background-color: #282828;
     border-radius: var(--border-radius);
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2, .card h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.changelog-entry h3 {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-}
-
-.changelog-entry p {
+.card p, .card ul {
     font-size: 1.1rem;
     color: var(--secondary-color);
 }
 
-.changelog-entry .version-date {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 1rem;
+.card ul {
+    padding-left: 20px;
 }
 
-.board-container {
+/* Flexbox Containers */
+.about-container, .board-container {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ermöglicht das Umfließen bei kleinen Bildschirmen */
+}
+
+.about-container {
+    margin-bottom: 3rem;
 }
 
 .board-column {
-    width: 240px;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -86,6 +118,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 22%;
 }
 
 .board-column h3 {
@@ -94,6 +127,7 @@ main {
     text-align: center;
 }
 
+/* Task Styles for Roadmap */
 .board-task {
     background-color: #fff;
     border-radius: var(--border-radius);
@@ -122,8 +156,9 @@ main {
     background-color: var(--green);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    .board-container {
+    .about-container, .board-container {
         flex-direction: column;
         gap: 10px;
     }
@@ -132,43 +167,8 @@ main {
         width: 100%;
         margin-right: 0;
     }
-}
 
-/* About Page */
-.about-container {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 3rem;
-}
-
-.card {
-    background-color: #282828;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.card p, .card ul {
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-}
-
-.card ul {
-    padding-left: 20px;
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
+    .card {
+        flex: 1 1 100%; /* Jede Karte nimmt die volle Breite auf kleinen Geräten */
     }
 }
