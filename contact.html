@@ -10,19 +10,32 @@
   <h1>Contact Us</h1>
   
   <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+    
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" required placeholder="Your name" />
     
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" required placeholder="Your email" />
     
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" required placeholder="Subject of your message" />
+    
+    <label for="category">Category:</label>
+    <select name="category" id="category" required>
+      <option value="" disabled selected>Select category</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Bug Report">Bug Report</option>
+      <option value="Feature Request">Feature Request</option>
+      <option value="Game Idea">Game Idea</option>
+      <option value="Support Inquiry">Support Inquiry</option>
+      <option value="Other">Other</option>
+    </select>
+    
     <label for="message">Message:</label>
     <textarea name="message" id="message" required placeholder="Your message"></textarea>
     
     <button type="submit">Send</button>
   </form>
-
-  <p>Thank you for reaching out!</p>
   
 </body>
 </html>
