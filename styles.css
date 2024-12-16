@@ -4,16 +4,14 @@
     --accent-color: #00b386;
     --accent-hover: #00d9a3; 
     --neon-pink: #ff00ff; 
+    --red: #ff4d4d;
+    --yellow: #f9d342;
+    --blue: #3b82f6;
+    --green: #34d399;
     --border-radius: 8px;
     --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     --font-family: 'Roboto', sans-serif;
     --heading-font: 'Oswald', sans-serif;
-
-    /* Todo Page Colors */
-    --todo-color-1: #ff6f61;
-    --todo-color-2: #ffcc00;
-    --todo-color-3: #4caf50;
-    --todo-color-4: #00bcd4;
 }
 
 * {
@@ -42,6 +40,7 @@ h1, h2 {
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
 }
+
 h1 {
     font-size: 2.5rem;
 }
@@ -61,15 +60,15 @@ ul {
 }
 
 a {
-  font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  padding: 8px 12px;
-  border-radius: var(--border-radius);
-  display: inline-block;
-  text-align: center; 
+    font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    text-align: center; 
 }
 
 a:hover {
@@ -132,59 +131,75 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Highlighted text */
 .highlight {
     color: var(--neon-pink);
     font-weight: bold;
 }
 
-/* Responsive Footer */
+.board-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.board-column {
+    width: 230px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.board-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.board-task {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+}
+
+.board-task:hover {
+    transform: translateY(-5px);
+}
+
+.board-column-red .board-task {
+    background-color: var(--red);
+}
+
+.board-column-yellow .board-task {
+    background-color: var(--yellow);
+}
+
+.board-column-blue .board-task {
+    background-color: var(--blue);
+}
+
+.board-column-green .board-task {
+    background-color: var(--green);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 @media (min-width: 768px) {
     .footer-content {
         flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-/* Todo Board Layout */
-.todo-board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.todo-column {
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
-
-/* Each Todo column has its own background color */
-.todo-column:nth-child(1) {
-    background-color: var(--todo-color-1);
-}
-
-.todo-column:nth-child(2) {
-    background-color: var(--todo-color-2);
-}
-
-.todo-column:nth-child(3) {
-    background-color: var(--todo-color-3);
-}
-
-.todo-column:nth-child(4) {
-    background-color: var(--todo-color-4);
-}
-
-/* Center the board on large screens */
-@media (min-width: 1024px) {
-    .todo-board {
-        display: flex;
         justify-content: center;
-        align-items: center;
     }
 }
+
