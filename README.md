@@ -18,7 +18,7 @@ The project "Sphere of Blox" is a mobile game leveraging the Android Nearby Conn
 - **styles.css:** Stylesheets for the website.
 
 ## Release Plan
-- **Planned Release Date:** 14.12.2024
+- **Planned Release Date:** 18.12.2024
 - **Google Play Store Link:** [Insert Link]
 
 ## Contact
