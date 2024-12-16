@@ -239,6 +239,42 @@ footer {
     background-color: var(--green);
 }
 
+/* Card Styling */
+.card {
+    background-color: #333;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card p, .card ul {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 0.8rem;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
