@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="navbar-container"></div>
+
   <main>
     <section class="about-container">
       <div class="card game-description">
@@ -43,9 +45,17 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <div id="footer-container"></div>
 
   <script>
+    // Navbar und Footer aus externem HTML laden
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+
     // Footer aus externem HTML laden
     fetch('footer.html')
       .then(response => response.text())
