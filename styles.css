@@ -113,6 +113,14 @@ a:hover {
     background-color: var(--todo-color-4);
 }
 
+.card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
 /* Task Cards für die Todo-Items */
 .task-card {
     background-color: #333;
