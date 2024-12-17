@@ -69,14 +69,14 @@
 }
 
 .changelog-entry .version-date,
-.changelog-entry .developer-name {
+.changelog-entry {
     font-size: 1rem;
     color: #ccc;
-    margin-top: 1.5rem; /* Erhöhter Abstand zwischen den Änderungen und dem Developer */
+    margin-top: 1.5rem;
 }
 
 .changelog-entry .version-date strong,
-.changelog-entry .developer-name strong {
+.changelog-entry {
     color: var(--secondary-color);
 }
 
@@ -98,8 +98,4 @@
 .changelog-entry .version-date {
     font-size: 1.2rem;
     color: #ccc;
-}
-
-.changelog-entry .version-date::after {
-    content: "XX December 2024"; /* Beispiel-Datum */
 }
