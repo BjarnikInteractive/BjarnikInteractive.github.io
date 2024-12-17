@@ -1,5 +1,4 @@
-// Hamburger-Menü Logik
-document.querySelector('.hamburger').addEventListener('click', function () {
-  const navbar = document.querySelector('.navbar ul');  // Greife auf das <ul> der Navbar zu
-  navbar.classList.toggle('active');  // Toggle die 'active' Klasse
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active'); // Toggle die "active"-Klasse zum Anzeigen/Ausblenden des Menüs
 });
