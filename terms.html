@@ -9,73 +9,74 @@
 <body>
   <!-- Navbar Container -->
   <div id="navbar-container"></div>
-
-  <!-- English Version -->
-  <div class="section card">
-    <h1>Terms of Use <span class="language-tag">(English)</span></h1>
-    <h2>1. Scope</h2>
-    <p>These Terms of Use govern the use of the game "Battle Blox" (hereinafter referred to as "the Game") developed by Bjarnik Interactive.</p>
-
-    <h2>2. License to Use</h2>
-    <p>By downloading and using the Game, we grant you a non-exclusive, non-transferable license to use the Game on your device.</p>
-
-    <h2>3. Usage Rights and Restrictions</h2>
-    <p>The use of the Game is only permitted for personal, non-commercial purposes. Any form of distribution, reproduction, or commercial use is prohibited without express permission from the developer.</p>
-
-    <h2>4. Privacy</h2>
-    <p>The processing of your data is governed by our <a href="privacy.html">Privacy Policy</a>. The Game uses the Android Nearby Connections API to enable multiplayer functionality and enhance the user experience.</p>
-
-    <h2>5. Liability</h2>
-    <p>The Game is provided "as is." We assume no liability for damages resulting from the use of the Game, except in cases of willful or gross negligence.</p>
-
-    <h2>6. Changes to the Terms</h2>
-    <p>We reserve the right to change these Terms of Use at any time. Any changes will be posted on this page and will be deemed accepted by you if you continue to use the Game after the changes are made.</p>
-
-    <h2>7. Contact</h2>
-    <p>If you have any questions regarding the Terms of Use or the Game, you can contact us at: <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
-  </div>
-
-  <!-- German Version -->
-  <div class="section card">
-    <h1>Nutzungsbedingungen <span class="language-tag">(Deutsch)</span></h1>
-    <h2>1. Geltungsbereich</h2>
-    <p>Diese Nutzungsbedingungen regeln die Nutzung des Spiels „Battle Blox“ (im Folgenden „Spiel“ genannt), das von Bjarnik Interactive entwickelt wird.</p>
-
-    <h2>2. Lizenz zur Nutzung</h2>
-    <p>Durch das Herunterladen und Verwenden des Spiels gewähren wir dir eine nicht-exklusive, nicht übertragbare Lizenz zur Nutzung des Spiels auf deinem Endgerät.</p>
-
-    <h2>3. Nutzungsrecht und Einschränkungen</h2>
-    <p>Die Nutzung des Spiels ist ausschließlich für den persönlichen, nicht-kommerziellen Gebrauch gestattet. Jegliche Form der Verbreitung, Vervielfältigung oder kommerziellen Nutzung ist ohne ausdrückliche Genehmigung des Entwicklers untersagt.</p>
-
-    <h2>4. Datenschutz</h2>
-    <p>Die Verarbeitung deiner Daten erfolgt gemäß der <a href="privacy.html">Datenschutzerklärung</a>. Das Spiel verwendet die Android Nearby Connections API zur Ermöglichung der Multiplayer-Funktionalität und zur Verbesserung der Spielerfahrung.</p>
-
-    <h2>5. Haftung</h2>
-    <p>Das Spiel wird „wie gesehen“ bereitgestellt. Wir übernehmen keine Haftung für Schäden, die durch die Nutzung des Spiels entstehen, es sei denn, diese sind auf grob fahrlässiges oder vorsätzliches Verhalten zurückzuführen.</p>
-
-    <h2>6. Änderungen der Nutzungsbedingungen</h2>
-    <p>Wir behalten uns das Recht vor, diese Nutzungsbedingungen bei Bedarf zu aktualisieren. Änderungen werden auf dieser Seite veröffentlicht und gelten als akzeptiert, wenn du das Spiel nach der Veröffentlichung weiterhin nutzt.</p>
-
-    <h2>7. Kontakt</h2>
-    <p>Bei Fragen zu den Nutzungsbedingungen oder zum Spiel kannst du uns unter der folgenden E-Mail-Adresse erreichen: <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
-  </div>
-
-  <!-- Footer Container -->
-  <div id="footer-container"></div>
-
-  <!-- Script to load Navbar and Footer -->
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-      });
-
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      });
-  </script>
+  <main>
+    <!-- English Version -->
+    <div class="section card">
+      <h1>Terms of Use <span class="language-tag">(English)</span></h1>
+      <h2>1. Scope</h2>
+      <p>These Terms of Use govern the use of the game "Battle Blox" (hereinafter referred to as "the Game") developed by Bjarnik Interactive.</p>
+  
+      <h2>2. License to Use</h2>
+      <p>By downloading and using the Game, we grant you a non-exclusive, non-transferable license to use the Game on your device.</p>
+  
+      <h2>3. Usage Rights and Restrictions</h2>
+      <p>The use of the Game is only permitted for personal, non-commercial purposes. Any form of distribution, reproduction, or commercial use is prohibited without express permission from the developer.</p>
+  
+      <h2>4. Privacy</h2>
+      <p>The processing of your data is governed by our <a href="privacy.html">Privacy Policy</a>. The Game uses the Android Nearby Connections API to enable multiplayer functionality and enhance the user experience.</p>
+  
+      <h2>5. Liability</h2>
+      <p>The Game is provided "as is." We assume no liability for damages resulting from the use of the Game, except in cases of willful or gross negligence.</p>
+  
+      <h2>6. Changes to the Terms</h2>
+      <p>We reserve the right to change these Terms of Use at any time. Any changes will be posted on this page and will be deemed accepted by you if you continue to use the Game after the changes are made.</p>
+  
+      <h2>7. Contact</h2>
+      <p>If you have any questions regarding the Terms of Use or the Game, you can contact us at: <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
+    </div>
+  
+    <!-- German Version -->
+    <div class="section card">
+      <h1>Nutzungsbedingungen <span class="language-tag">(Deutsch)</span></h1>
+      <h2>1. Geltungsbereich</h2>
+      <p>Diese Nutzungsbedingungen regeln die Nutzung des Spiels „Battle Blox“ (im Folgenden „Spiel“ genannt), das von Bjarnik Interactive entwickelt wird.</p>
+  
+      <h2>2. Lizenz zur Nutzung</h2>
+      <p>Durch das Herunterladen und Verwenden des Spiels gewähren wir dir eine nicht-exklusive, nicht übertragbare Lizenz zur Nutzung des Spiels auf deinem Endgerät.</p>
+  
+      <h2>3. Nutzungsrecht und Einschränkungen</h2>
+      <p>Die Nutzung des Spiels ist ausschließlich für den persönlichen, nicht-kommerziellen Gebrauch gestattet. Jegliche Form der Verbreitung, Vervielfältigung oder kommerziellen Nutzung ist ohne ausdrückliche Genehmigung des Entwicklers untersagt.</p>
+  
+      <h2>4. Datenschutz</h2>
+      <p>Die Verarbeitung deiner Daten erfolgt gemäß der <a href="privacy.html">Datenschutzerklärung</a>. Das Spiel verwendet die Android Nearby Connections API zur Ermöglichung der Multiplayer-Funktionalität und zur Verbesserung der Spielerfahrung.</p>
+  
+      <h2>5. Haftung</h2>
+      <p>Das Spiel wird „wie gesehen“ bereitgestellt. Wir übernehmen keine Haftung für Schäden, die durch die Nutzung des Spiels entstehen, es sei denn, diese sind auf grob fahrlässiges oder vorsätzliches Verhalten zurückzuführen.</p>
+  
+      <h2>6. Änderungen der Nutzungsbedingungen</h2>
+      <p>Wir behalten uns das Recht vor, diese Nutzungsbedingungen bei Bedarf zu aktualisieren. Änderungen werden auf dieser Seite veröffentlicht und gelten als akzeptiert, wenn du das Spiel nach der Veröffentlichung weiterhin nutzt.</p>
+  
+      <h2>7. Kontakt</h2>
+      <p>Bei Fragen zu den Nutzungsbedingungen oder zum Spiel kannst du uns unter der folgenden E-Mail-Adresse erreichen: <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
+    </div>
+  
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+  
+    <!-- Script to load Navbar and Footer -->
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        });
+  
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        });
+    </script>
+  </main>
 </body>
 </html>
