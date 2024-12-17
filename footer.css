@@ -6,6 +6,7 @@ footer {
     margin-top: auto;
     border-top: 4px solid var(--accent-color);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem; /* Schriftgröße für den gesamten Footer */
 }
 
 .footer-content {
@@ -23,6 +24,7 @@ footer {
     border-radius: var(--border-radius);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
     display: inline-block;
+    font-size: 1.1rem; /* Schriftgröße für Links */
 }
 
 .footer-link:hover {
