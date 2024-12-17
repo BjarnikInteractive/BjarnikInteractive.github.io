@@ -10,7 +10,6 @@
     --heading-font: 'Oswald', sans-serif; /* Schriftart für Überschriften */
 }
 
-/* Globaler Stil */
 * {
     margin: 0;
     padding: 0;
@@ -107,9 +106,4 @@ canvas {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
-}
-
-.highlight {
-    color: var(--neon-pink);
-    font-weight: bold;
 }
