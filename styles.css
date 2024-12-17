@@ -17,11 +17,21 @@ main {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    background-color: #000; 
     color: var(--secondary-color);
     margin: 0;
     padding: 0;
 }
+
+.section {
+    background-color: var(--background-color); /* Dunkelgrauer Hintergrund für den Inhalt */
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: var(--box-shadow);
+    max-width: 1200px;
+}
+
 
 /* Canvas */
 canvas {
@@ -32,15 +42,6 @@ canvas {
     height: 100vh; /* Standardhöhe für das Canvas */
     display: block;
     margin-bottom: 2rem;
-}
-
-.section {
-  margin: 3rem auto;
-  max-width: 1200px;
-  padding: 2rem;
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
 }
 
 h1, h2 {
