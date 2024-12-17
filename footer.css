@@ -6,7 +6,7 @@ footer {
     margin-top: auto;
     border-top: 4px solid var(--accent-color);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
-    font-size: 1.2rem; /* Schriftgröße für den gesamten Footer */
+    font-size: 1.4rem; /* Größere Schriftgröße für den gesamten Footer */
 }
 
 .footer-content {
@@ -24,11 +24,19 @@ footer {
     border-radius: var(--border-radius);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
     display: inline-block;
-    font-size: 1.1rem; /* Schriftgröße für Links */
+    font-size: 1.3rem; /* Größere Schriftgröße für die Links */
 }
 
 .footer-link:hover {
     color: white;
     background-color: var(--accent-hover);
     transform: translateY(-2px);
+}
+
+.footer-contact p {
+    font-size: 1.3rem; /* Größere Schriftgröße für die Texte im Footer */
+}
+
+.footer-contact a {
+    font-size: 1.3rem; /* Größere Schriftgröße für den Kontakt-Link */
 }
