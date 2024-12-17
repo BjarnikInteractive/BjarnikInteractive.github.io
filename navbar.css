@@ -1,4 +1,4 @@
-/* Navbar Styles */
+/* Grundstil für das Navbar */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -9,54 +9,56 @@
 
 .logo {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
+/* Hamburger-Menü */
+.hamburger-menu {
+    display: none; /* Auf großen Bildschirmen wird das Hamburger-Symbol nicht angezeigt */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Navigation Links */
 .nav-links {
-    display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
 .nav-links li {
-    margin-right: 2rem;
+    color: #fff;
 }
 
 .nav-links a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.hamburger-menu {
-    display: none; /* Standardmäßig unsichtbar */
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-}
-
+/* Bei kleinen Bildschirmen */
 @media (max-width: 768px) {
+    /* Hamburger-Menü sichtbar machen */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Navigation Links ausblenden */
     .nav-links {
-        display: none; /* Auf mobilen Geräten ist das Menü standardmäßig unsichtbar */
+        display: none;
         width: 100%;
         flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: 0;
+        gap: 0;
         background-color: #333;
-        padding-top: 2rem;
+        position: absolute;
+        top: 60px; /* Damit es unter der Navbar angezeigt wird */
+        left: 0;
+        padding: 1rem;
     }
 
-    .nav-links li {
-        margin: 1rem 0;
-    }
-
-    .hamburger-menu {
-        display: block; /* Das Hamburger-Menü erscheint bei mobilen Geräten */
-    }
-
+    /* Navigation Links sichtbar machen, wenn Hamburger-Menü angeklickt wurde */
     .nav-links.active {
-        display: flex; /* Zeige das Menü an, wenn es aktiv ist */
+        display: flex;
     }
 }
