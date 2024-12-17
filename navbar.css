@@ -31,27 +31,8 @@ body {
   padding: 0;
 }
 
-/* Für mobile Ansicht wird das Menü standardmäßig versteckt */
-.navbar ul {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #000;
-  width: 250px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.navbar ul.active {
-  display: flex; /* Menu wird sichtbar, wenn es die Klasse 'active' bekommt */
-}
-
 .navbar ul li {
-  margin: 10px 0;
-  text-align: center;
-  width: 100%;
+  margin: 0 15px; /* Standard Abstand zwischen den Links */
 }
 
 .navbar ul li a {
@@ -74,7 +55,7 @@ body {
   cursor: pointer;
   font-size: 30px;
   position: relative;
-  right: 40px;
+  right: 40px; /* Etwas nach rechts verschoben */
 }
 
 .hamburger span {
@@ -87,18 +68,8 @@ body {
 
 /* Mobile Ansicht: Hamburger-Menü aktivieren */
 @media (max-width: 768px) {
-  /* Hamburger-Menü sichtbar machen */
-  .hamburger {
-    display: block;
-  }
-
-  /* Das Menü wird durch das Hinzufügen der 'active' Klasse sichtbar */
-  .navbar ul.active {
-    display: flex;
-  }
-
-  /* Navbar in einer vertikalen Reihenfolge anzeigen */
   .navbar ul {
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -108,6 +79,30 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
+
+  .navbar ul.active {
+    display: flex; /* Menü wird angezeigt, wenn 'active' Klasse hinzugefügt wird */
+  }
+
+  .navbar ul li {
+    width: 100%; /* Alle Links nehmen die gesamte Breite ein */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Abstand für Contact Link */
+  .navbar ul li:last-child {
+    margin-right: 20px; /* Abstand nach rechts für den letzten Link (Contact) */
+  }
+
+  .navbar ul li a:hover {
+    background-color: #006F77; /* Petrol Hover-Effekt */
+    border-radius: 5px;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Desktop Ansicht: Menü immer horizontal anzeigen */
@@ -115,10 +110,11 @@ body {
   .navbar ul {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start; /* Links linksbündig ausrichten */
   }
 
   .navbar ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Abstand zwischen den Links */
   }
 
   .hamburger {
