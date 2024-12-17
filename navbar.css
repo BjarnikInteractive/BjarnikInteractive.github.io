@@ -12,6 +12,11 @@
   z-index: 1000;
 }
 
+/* Der Inhalt nach der Navbar muss nach unten verschoben werden */
+body {
+  margin-top: 80px; /* Abstand nach oben, damit der Inhalt unter der Navbar beginnt */
+}
+
 .navbar .logo {
   font-size: 24px;
   font-weight: bold;
