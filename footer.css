@@ -1,5 +1,4 @@
 footer {
-    background-color: #111;
     color: var(--secondary-color); /* Helles Grau aus den Variablen */
     padding: 3rem 2rem;
     text-align: center;
