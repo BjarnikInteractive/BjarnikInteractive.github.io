@@ -84,14 +84,9 @@ body {
   }
 
   .navbar ul li {
-    width: 100%; /* Alle Links nehmen die gesamte Breite ein */
+    width: 100%;
     text-align: center;
     padding: 10px 0;
-  }
-
-  /* Abstand für Contact Link */
-  .navbar ul li:last-child {
-    margin-right: 20px; /* Abstand nach rechts für den letzten Link (Contact) */
   }
 
   .navbar ul li a:hover {
