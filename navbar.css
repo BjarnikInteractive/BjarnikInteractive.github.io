@@ -54,6 +54,8 @@ body {
   display: none;
   cursor: pointer;
   font-size: 30px;
+  position: relative;
+  right: 40px; 
 }
 
 .hamburger span {
@@ -63,6 +65,7 @@ body {
   background-color: #fff;
   margin: 5px 0;
 }
+
 
 /* Mobile Ansicht: Hamburger-Menü aktivieren */
 @media (max-width: 768px) {
