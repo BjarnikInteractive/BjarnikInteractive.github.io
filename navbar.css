@@ -1,128 +1,62 @@
-/* Grundlegende Navbar-Stile */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #000; /* Hintergrundfarbe der Navbar auf schwarz gesetzt */
-  color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* Der Inhalt nach der Navbar muss nach unten verschoben werden */
-body {
-  margin-top: 80px; /* Abstand nach oben, damit der Inhalt unter der Navbar beginnt */
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li {
-  margin: 0 15px; /* Standard Abstand zwischen den Links */
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  display: block;
-}
-
-/* Hover-Effekte */
-.navbar ul li a:hover {
-  background-color: #006F77; /* Petrol Hover-Effekt */
-  border-radius: 5px;
-}
-
-/* Hamburger-Menü */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 30px;
-  position: relative;
-  right: 40px; /* Etwas nach rechts verschoben */
-}
-
-.hamburger span {
-  display: block;
-  width: 30px;
-  height: 4px;
-  background-color: #fff;
-  margin: 5px 0;
-}
-
-/* Mobile Ansicht: Hamburger-Menü aktivieren */
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #000;
-    width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-
-  .navbar ul.active {
-    display: flex; /* Menü wird angezeigt, wenn 'active' Klasse hinzugefügt wird */
-  }
-
-  .navbar ul li {
-    width: 100%; /* Alle Links nehmen die gesamte Breite ein */
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  /* Abstand für Contact Link */
-  .navbar ul li:last-child {
-    margin-right: 20px; /* Abstand nach rechts für den letzten Link (Contact) */
-  }
-
-  .navbar ul li a:hover {
-    background-color: #006F77; /* Petrol Hover-Effekt */
-    border-radius: 5px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Desktop Ansicht: Menü immer horizontal anzeigen */
-@media (min-width: 768px) {
-  .navbar ul {
+/* Navbar Styles */
+.navbar-container {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* Links linksbündig ausrichten */
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
 
-  .navbar ul li {
-    margin: 0 15px; /* Abstand zwischen den Links */
-  }
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
 
-  /* Hinzufügen von Abstand nach dem letzten Menüpunkt "Contact" */
-  .navbar ul li:last-child {
-    margin-right: 30px; /* Hier der zusätzliche Abstand nach dem letzten Link */
-  }
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-  .hamburger {
-    display: none; /* Hamburger-Menü auf Desktop ausblenden */
-  }
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hamburger-menu {
+    display: none; /* Standardmäßig unsichtbar */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Auf mobilen Geräten ist das Menü standardmäßig unsichtbar */
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        padding-top: 2rem;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* Das Hamburger-Menü erscheint bei mobilen Geräten */
+    }
+
+    .nav-links.active {
+        display: flex; /* Zeige das Menü an, wenn es aktiv ist */
+    }
 }
