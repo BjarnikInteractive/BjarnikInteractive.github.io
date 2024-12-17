@@ -1,181 +1,118 @@
+/* Farbpalette */
 :root {
-    --primary-color: #1a1a1a; /* Hintergrundfarbe */
-    --secondary-color: #f0f0f0; /* Textfarbe */
-    --accent-color: #00b386; /* Petrol-Akzentfarbe */
-    --accent-hover: #00d9a3; /* Hover-Farbe für Akzente */
-    --neon-pink: #ff00ff; /* Neon-Pink für Highlights */
-    --border-radius: 8px; /* Abgerundete Ecken */
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box-Schatten */
-    --font-family: 'Roboto', sans-serif; /* Standard-Schriftart */
-    --heading-font: 'Oswald', sans-serif; /* Schriftart für Überschriften */
+    --primary-color: #1d1d1d;       /* Dunkelgrau */
+    --accent-color: #1abc9c;        /* Petrol */
+    --secondary-color: #ccc;        /* Hellgrau */
+    --background-color: #282828;    /* Dunkler Hintergrund */
+    --highlight-color: #f39c12;     /* Gelb für Highlights */
+    --border-radius: 10px;          /* Abgerundete Ecken */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten */
+    --canvas-background: #111;      /* Hintergrund für Canvas */
+    --link-hover-color: #1abc9c;    /* Petrol für Links */
 }
 
-* {
+/* Allgemeine Struktur */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: var(--font-family);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 70px 20px 20px;
-    line-height: 1.6;
-    overflow-x: hidden;
+/* Canvas */
+canvas {
+    background-color: var(--canvas-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 500px; /* Standardhöhe für das Canvas */
+    display: block;
+    margin-bottom: 2rem;
 }
 
-/* Überschriften */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--accent-color); /* Überschriftenfarbe in Petrol */
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+/* Section (z.B. Privacy Policy, Changelog) */
+.section {
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 2rem;
+    color: var(--accent-color);
 }
 
-/* Absätze und Listen */
-p, ul, li {
-    margin-bottom: 1.5rem;
+p, ul {
     font-size: 1.1rem;
+    color: var(--secondary-color);
 }
 
 ul {
     padding-left: 20px;
 }
 
-/* Links */
+ul li {
+    margin-bottom: 0.5rem;
+}
+
 a {
-    font-size: clamp(1rem, 2.5vw + 1.5rem, 2.5rem);
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    padding: 8px 12px;
-    border-radius: var(--border-radius);
-    display: inline-block;
-    text-align: center;
 }
 
 a:hover {
-    color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 179, 134, 0.1);
-    text-decoration: none;
+    text-decoration: underline;
+    color: var(--link-hover-color); /* Petrol-Hover-Effekt */
 }
 
-.highlight {
-    color: var(--neon-pink);
-    font-weight: bold;
-}
-
-/* Spezifische Anpassungen für die neuen HTML-Seiten (Impressum, Datenschutz, Nutzungsbedingungen) */
-section {
-    margin-bottom: 3rem;
-    background-color: #282828;
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
     border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-section:hover {
-    transform: translateY(-5px);
+button:hover {
+    background-color: var(--highlight-color); /* Gelber Hover-Effekt */
 }
 
-/* Card für Privacy Policy, Terms, Imprint */
-.card {
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    box-shadow: var(--box-shadow);
-    margin-bottom: 20px;
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h2 {
-    color: var(--accent-color);
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.card p, .card ul {
-    font-size: 1.1rem;
-    color: #f0f0f0;
-}
-
-.card ul {
-    padding-left: 20px;
-}
-
-.card ul li {
-    margin: 8px 0;
-}
-
-/* Anpassungen für die einzelnen Seiten */
-#privacy-policy, #terms, #imprint, #datenschutz {
-    padding: 20px;
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 30px;
-}
-
-h1 {
-    color: var(--accent-color); /* Hier wird sicher gestellt, dass alle Überschriften in Petrol erscheinen */
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 1.4rem;
-}
-
-/* Anpassungen für canvas */
-canvas {
-    width: 100%;
-    display: block;
-    border-radius: var(--border-radius);
-}
-
-/* Mobile Ansichten */
+/* Responsive Design */
 @media (max-width: 768px) {
     .section {
-        padding: 15px;
-        margin: 15px;
-    }
-
-    .card {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 1rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
-    p, ul, li {
+    p, ul {
         font-size: 1rem;
     }
+
+    canvas {
+        height: 300px; /* Kleinere Höhe auf mobilen Geräten */
+    }
 }
+
+/* Footer und Navbar (bereits in eigenen Dateien) */
