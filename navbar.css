@@ -1,64 +1,128 @@
-/* Grundstil für das Navbar */
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
+/* Grundlegende Navbar-Stile */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #000; /* Hintergrundfarbe der Navbar auf schwarz gesetzt */
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.logo {
-    color: #fff;
-    font-size: 1.8rem;
+/* Der Inhalt nach der Navbar muss nach unten verschoben werden */
+body {
+  margin-top: 80px; /* Abstand nach oben, damit der Inhalt unter der Navbar beginnt */
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px; /* Standard Abstand zwischen den Links */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Hover-Effekte */
+.navbar ul li a:hover {
+  background-color: #006F77; /* Petrol Hover-Effekt */
+  border-radius: 5px;
 }
 
 /* Hamburger-Menü */
-.hamburger-menu {
-    display: none; /* Auf großen Bildschirmen wird das Hamburger-Symbol nicht angezeigt */
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  right: 40px; /* Etwas nach rechts verschoben */
 }
 
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0;
 }
 
-.nav-links li {
-    color: #fff;
-}
-
-.nav-links a {
-    color: inherit;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Bei kleinen Bildschirmen */
+/* Mobile Ansicht: Hamburger-Menü aktivieren */
 @media (max-width: 768px) {
-    /* Hamburger-Menü sichtbar machen */
-    .hamburger-menu {
-        display: block;
-    }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
 
-    /* Navigation Links ausblenden */
-    .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 0;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Damit es unter der Navbar angezeigt wird */
-        left: 0;
-        padding: 1rem;
-    }
+  .navbar ul.active {
+    display: flex; /* Menü wird angezeigt, wenn 'active' Klasse hinzugefügt wird */
+  }
 
-    /* Navigation Links sichtbar machen, wenn Hamburger-Menü angeklickt wurde */
-    .nav-links.active {
-        display: flex;
-    }
+  .navbar ul li {
+    width: 100%; /* Alle Links nehmen die gesamte Breite ein */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Abstand für Contact Link */
+  .navbar ul li:last-child {
+    margin-right: 20px; /* Abstand nach rechts für den letzten Link (Contact) */
+  }
+
+  .navbar ul li a:hover {
+    background-color: #006F77; /* Petrol Hover-Effekt */
+    border-radius: 5px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Desktop Ansicht: Menü immer horizontal anzeigen */
+@media (min-width: 768px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Links linksbündig ausrichten */
+  }
+
+  .navbar ul li {
+    margin: 0 15px; /* Abstand zwischen den Links */
+  }
+
+  /* Hinzufügen von Abstand nach dem letzten Menüpunkt "Contact" */
+  .navbar ul li:last-child {
+    margin-right: 30px; /* Hier der zusätzliche Abstand nach dem letzten Link */
+  }
+
+  .hamburger {
+    display: none; /* Hamburger-Menü auf Desktop ausblenden */
+  }
 }
