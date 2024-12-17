@@ -1,11 +1,10 @@
-const hamburger = document.querySelector('.hamburger'); // Deklaration der Hamburger Variable
+const hamburger = document.querySelector('.hamburger');
 const navUl = document.querySelector('.navbar ul');
 
-// Hinzugefügte Überprüfung, ob die Elemente überhaupt gefunden wurden:
-if (hamburger && navUl) {
+if (hamburger && navUl) { // WICHTIG: Überprüfung, ob die Elemente gefunden wurden
     hamburger.addEventListener('click', () => {
-        console.log('Hamburger wurde geklickt'); // Für Debugging
-        console.log(navUl); // Für Debugging: Ausgabe des gefundenen Elements
+        console.log('Hamburger wurde geklickt'); // Zum Debuggen
+        console.log(navUl); // Zum Debuggen
         navUl.classList.toggle('active');
         hamburger.classList.toggle('active'); // Optionale visuelle Anpassung
     });
