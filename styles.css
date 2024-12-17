@@ -24,10 +24,11 @@ body {
     font-family: var(--font-family);
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 20px;
+    padding: 70px 20px 20px; 
     line-height: 1.6;
     overflow-x: hidden;
 }
+
 
 /* Überschriften */
 h1, h2 {
