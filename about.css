@@ -10,6 +10,18 @@
     transition: transform 0.2s ease;
 }
 
+.about-us-container {
+    margin-top: 2rem;
+}
+
+/* Optional: Styling für spezifische Karten (z.B. game-description, gameplay, development) */
+.game-description ul,
+.gameplay ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+
 .about-card:hover {
     transform: translateY(-5px);
 }
