@@ -156,12 +156,6 @@ button:hover {
     margin: 0;
 }
 
-#privacy-policy ul li {
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.8rem;
-}
-
 /* Hover-Effekte für Karten */
 .card:hover {
     transform: translateY(-5px);
