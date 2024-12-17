@@ -1,10 +1,10 @@
 footer {
     background-color: #111;
-    color: #ccc;
+    color: var(--secondary-color); /* Helles Grau aus den Variablen */
     padding: 3rem 2rem;
     text-align: center;
     margin-top: auto;
-    border-top: 4px solid #1f5d5d; /* Petrol-Farbton für den Footer */
+    border-top: 4px solid var(--accent-color); /* Petrol aus den Variablen */
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
     font-size: 1.6rem; /* Größere Schriftgröße für den gesamten Footer */
 }
@@ -18,7 +18,7 @@ footer {
 }
 
 .footer-link {
-    color: #1f5d5d; /* Petrol-Farbton für die Links */
+    color: var(--accent-color); /* Petrol für Links aus den Variablen */
     text-decoration: none;
     padding: 10px 15px;
     border-radius: var(--border-radius);
@@ -29,7 +29,7 @@ footer {
 
 .footer-link:hover {
     color: white;
-    background-color: #1f5d5d; /* Petrol Hover-Effekt */
+    background-color: var(--accent-color); /* Petrol Hover-Effekt */
     transform: translateY(-2px);
 }
 
