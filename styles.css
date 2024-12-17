@@ -30,14 +30,13 @@ canvas {
     margin-bottom: 2rem;
 }
 
-/* Container für jede Section */
 .section {
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    margin: 2rem auto;
-    max-width: 1200px;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 h1, h2 {
