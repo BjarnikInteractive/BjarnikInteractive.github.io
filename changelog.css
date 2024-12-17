@@ -1,7 +1,8 @@
 /* Changelog und Dev Blog */
-.changelog-container, .dev-blogs-container .version-date {
+.changelog-container, .dev-blogs-container {
     margin-bottom: 3rem;
 }
+
 /* Dev Blogs */
 .dev-blog-container {
     display: flex;
@@ -52,17 +53,6 @@
     }
 }
 
-
-@media (max-width: 768px) {
-    .dev-blog-container {
-        flex-direction: column;
-    }
-
-    .dev-blog {
-        width: 100%; /* Auf kleinen Geräten nimmt der Dev-Blog die volle Breite */
-    }
-}
-
 /* Changelog */
 .changelog-entry {
     background-color: #282828;
@@ -78,15 +68,14 @@
     margin-bottom: 1rem;
 }
 
-.changelog-entry .version-date,
-.changelog-entry {
-    font-size: 1rem;
+.changelog-entry .version-date {
+    font-size: 1.2rem;
     color: #ccc;
-    margin-top: 1.5rem;
+    margin-top: 1rem; /* Mehr Abstand nach dem Titel */
+    margin-bottom: 1.5rem; /* Mehr Abstand nach dem Datum */
 }
 
-.changelog-entry .version-date strong,
-.changelog-entry {
+.changelog-entry .version-date strong {
     color: var(--secondary-color);
 }
 
@@ -102,10 +91,4 @@
     .changelog-entry {
         padding: 1rem;
     }
-}
-
-/* Stil für das Datum im gewünschten Format */
-.changelog-entry .version-date {
-    font-size: 1.2rem;
-    color: #ccc;
 }
