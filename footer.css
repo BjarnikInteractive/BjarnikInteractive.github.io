@@ -9,14 +9,25 @@ footer {
     font-size: 1.6rem; /* Größere Schriftgröße für den gesamten Footer */
 }
 
+/* Footer Content */
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     align-items: center;
+    margin-bottom: 2rem; /* Abstand nach oben */
 }
 
+/* Footer Kontakt Bereich */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Einheitliche Gestaltung für alle Links im Footer */
 .footer-link {
     color: #ccc;
     text-decoration: none;
@@ -27,6 +38,7 @@ footer {
     font-size: 1.5rem; /* Einheitliche Schriftgröße für alle Links */
 }
 
+/* Hover-Effekte für Links */
 .footer-link:hover {
     color: white;
     background-color: var(--accent-hover);
@@ -40,8 +52,25 @@ footer {
         gap: 1.5rem; /* Weniger Abstand zwischen den Links */
     }
 
+    .footer-contact {
+        align-items: center; /* Zentrierte Ausrichtung */
+        gap: 1rem;
+    }
+
     .footer-link {
         font-size: 1.6rem; /* Größere Schriftgröße für die Links auf kleineren Geräten */
         padding: 15px 20px; /* Mehr Padding für eine bessere Klickbarkeit */
+    }
+}
+
+/* Footer-Abstände auf großen Bildschirmen */
+@media (min-width: 1024px) {
+    footer {
+        padding: 4rem 3rem; /* Größere Abstände für größere Bildschirme */
+    }
+
+    .footer-link {
+        font-size: 1.7rem; /* Etwas größere Schriftgröße */
+        padding: 12px 20px; /* Mehr Abstand für die Links */
     }
 }
