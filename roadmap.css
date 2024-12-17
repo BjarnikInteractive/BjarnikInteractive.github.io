@@ -19,7 +19,7 @@
 
 .roadmap-column h2 {
   font-size: 1.8rem;
-  color: var(--accent-color);
+  color: #fff; /* Überschrift in Weiß */
   margin-bottom: 1rem;
 }
 
@@ -32,9 +32,25 @@
   box-shadow: var(--box-shadow);
 }
 
+/* Aufgabenüberschriften in der Farbe der jeweiligen Spalte */
+.roadmap-column.red .roadmap-task-card h3 {
+  color: #ff4d4d; /* Rote Farbe für die Aufgabenüberschrift */
+}
+
+.roadmap-column.yellow .roadmap-task-card h3 {
+  color: #ffcc00; /* Gelbe Farbe für die Aufgabenüberschrift */
+}
+
+.roadmap-column.blue .roadmap-task-card h3 {
+  color: #3399ff; /* Blaue Farbe für die Aufgabenüberschrift */
+}
+
+.roadmap-column.green .roadmap-task-card h3 {
+  color: #66cc66; /* Grüne Farbe für die Aufgabenüberschrift */
+}
+
 .roadmap-task-card h3 {
   font-size: 1.4rem;
-  color: var(--accent-color);
   margin-bottom: 0.8rem;
 }
 
