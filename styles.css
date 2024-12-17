@@ -151,9 +151,8 @@ button:hover {
 }
 
 #privacy-policy ul {
-    list-style: disc;
-    padding: 0;
-    margin: 0;
+    list-style-type: square;
+    margin-left: 20px;
 }
 
 /* Hover-Effekte für Karten */
