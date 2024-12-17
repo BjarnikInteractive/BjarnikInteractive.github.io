@@ -79,40 +79,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* Footer */
-footer {
-    background-color: #111;
-    color: #ccc;
-    padding: 3rem 2rem;
-    text-align: center;
-    margin-top: auto;
-    border-top: 4px solid var(--accent-color);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-}
-
-.footer-link {
-    color: #ccc;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: var(--border-radius);
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
-    display: inline-block;
-}
-
-.footer-link:hover {
-    color: white;
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
 .highlight {
     color: var(--neon-pink);
     font-weight: bold;
