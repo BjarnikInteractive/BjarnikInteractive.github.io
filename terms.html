@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Use / Nutzungsbedingungen</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar Container -->
   <div id="navbar-container"></div>
 
   <!-- English Version -->
-  <div class="section">
-    <h1>Terms of Use</h1>
+  <div class="section card">
+    <h1>Terms of Use <span class="language-tag">(English)</span></h1>
     <h2>1. Scope</h2>
     <p>These Terms of Use govern the use of the game "Battle Blox" (hereinafter referred to as "the Game") developed by Bjarnik Interactive.</p>
 
@@ -34,8 +36,8 @@
   </div>
 
   <!-- German Version -->
-  <div class="section">
-    <h1>Nutzungsbedingungen</h1>
+  <div class="section card">
+    <h1>Nutzungsbedingungen <span class="language-tag">(Deutsch)</span></h1>
     <h2>1. Geltungsbereich</h2>
     <p>Diese Nutzungsbedingungen regeln die Nutzung des Spiels „Battle Blox“ (im Folgenden „Spiel“ genannt), das von Bjarnik Interactive entwickelt wird.</p>
 
@@ -58,10 +60,11 @@
     <p>Bei Fragen zu den Nutzungsbedingungen oder zum Spiel kannst du uns unter der folgenden E-Mail-Adresse erreichen: <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
   </div>
 
+  <!-- Footer Container -->
   <div id="footer-container"></div>
 
+  <!-- Script to load Navbar and Footer -->
   <script>
-    // Navbar und Footer aus externem HTML laden
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
@@ -74,6 +77,5 @@
         document.getElementById('footer-container').innerHTML = data;
       });
   </script>
-  
 </body>
 </html>
