@@ -1,122 +1,119 @@
 /* Grundlegende Navbar-Stile */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #000; /* Hintergrundfarbe der Navbar auf schwarz gesetzt */
-  color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Der Inhalt nach der Navbar muss nach unten verschoben werden */
 body {
-  margin-top: 80px; /* Abstand nach oben, damit der Inhalt unter der Navbar beginnt */
+    margin-top: 80px;
 }
 
 .navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
 }
 
 .navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li {
-  margin: 0 15px; /* Standard Abstand zwischen den Links */
+    margin: 0 15px;
 }
 
 .navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
 }
 
-/* Hover-Effekte */
 .navbar ul li a:hover {
-  background-color: #006F77; /* Petrol Hover-Effekt */
-  border-radius: 5px;
+    background-color: #006F77;
+    border-radius: 5px;
 }
 
 /* Hamburger-Menü */
 .hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 30px;
-  position: relative;
-  right: 40px; /* Etwas nach rechts verschoben */
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    right: 40px;
 }
 
 .hamburger span {
-  display: block;
-  width: 30px;
-  height: 4px;
-  background-color: #fff;
-  margin: 5px 0;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
 }
 
 @media (max-width: 768px) {
-  .navbar ul {
-    display: none; /* Standardmäßig ausgeblendet */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #000;
-    width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
+    .navbar ul {
+        display: none; /* Standardmäßig ausgeblendet */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #000;
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
-  .navbar ul.active {
-    display: flex;
-  }
+    .navbar ul.active {
+        display: flex; /* Korrektur: Jetzt wird das Menü angezeigt */
+    }
 
-  .navbar ul li {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 
-  .navbar ul li a:hover {
-    background-color: #006F77; /* Petrol Hover-Effekt */
-    border-radius: 5px;
-  }
+    .navbar ul li a:hover {
+        background-color: #006F77;
+        border-radius: 5px;
+    }
 
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+        display: block;
+    }
 }
 
-/* Desktop Ansicht: Menü immer horizontal anzeigen */
+/* Desktop Ansicht */
 @media (min-width: 768px) {
-  .navbar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; /* Links linksbündig ausrichten */
-  }
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 
-  .navbar ul li {
-    margin: 0 15px; /* Abstand zwischen den Links */
-  }
+    .navbar ul li {
+        margin: 0 15px;
+    }
 
-  /* Hinzufügen von Abstand nach dem letzten Menüpunkt "Contact" */
-  .navbar ul li:last-child {
-    margin-right: 30px; /* Hier der zusätzliche Abstand nach dem letzten Link */
-  }
+    .navbar ul li:last-child {
+        margin-right: 30px;
+    }
 
-  .hamburger {
-    display: none; /* Hamburger-Menü auf Desktop ausblenden */
-  }
+    .hamburger {
+        display: none;
+    }
 }
