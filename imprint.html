@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imprint / Impressum</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar Container -->
   <div id="navbar-container"></div>
 
   <!-- Imprint (English) -->
-  <section class="section">
-    <h1>Imprint</h1>
+  <section class="section card">
+    <h1>Imprint <span class="language-tag">(English)</span></h1>
     <div class="content">
       <h2>Legal Information</h2>
       <p><strong>Name:</strong> Bjarnik Interactive</p>
@@ -25,8 +27,8 @@
   </section>
 
   <!-- Impressum (Deutsch) -->
-  <section class="section">
-    <h1>Impressum</h1>
+  <section class="section card">
+    <h1>Impressum <span class="language-tag">(Deutsch)</span></h1>
     <div class="content">
       <h2>Rechtliche Informationen</h2>
       <p><strong>Name:</strong> Bjarnik Interactive</p>
@@ -40,10 +42,11 @@
     </div>
   </section>
 
+  <!-- Footer Container -->
   <div id="footer-container"></div>
 
+  <!-- Script to load Navbar and Footer -->
   <script>
-    // Navbar und Footer aus externem HTML laden
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
