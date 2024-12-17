@@ -24,11 +24,10 @@ body {
     font-family: var(--font-family);
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 70px 20px 20px; 
+    padding: 70px 20px 20px;
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 
 /* Überschriften */
 h1, h2 {
@@ -98,8 +97,55 @@ section:hover {
     transform: translateY(-5px);
 }
 
-h1, h2 {
+/* Card für Privacy Policy, Terms, Imprint */
+.card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p, .card ul {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin: 8px 0;
+}
+
+/* Anpassungen für die einzelnen Seiten */
+#privacy-policy, #terms, #imprint, #datenschutz {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+h1 {
     color: var(--accent-color); /* Hier wird sicher gestellt, dass alle Überschriften in Petrol erscheinen */
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
 
 /* Anpassungen für canvas */
@@ -107,4 +153,29 @@ canvas {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
+}
+
+/* Mobile Ansichten */
+@media (max-width: 768px) {
+    .section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, ul, li {
+        font-size: 1rem;
+    }
 }
