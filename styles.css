@@ -119,4 +119,68 @@ button:hover {
     }
 }
 
-/* Footer und Navbar (bereits in eigenen Dateien) */
+/* Allgemeine Styles für Abschnitte und Karten */
+
+/* Card-Container */
+.card {
+  background-color: #282828;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+}
+
+/* Hover-Effekte für Karten */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Container für mehrere Cards (Flexbox) */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.about-us-container {
+  margin-top: 2rem;
+}
+
+/* Responsives Layout: Mobile Ansicht */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%; /* Karten nehmen die gesamte Breite ein */
+  }
+}
+
+/* Optional: Styling für spezifische Karten (z.B. game-description, gameplay, development) */
+.game-description ul,
+.gameplay ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
