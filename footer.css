@@ -33,17 +33,6 @@ footer {
     transform: translateY(-2px);
 }
 
-.footer-contact p,
-.footer-contact a {
-    font-size: 1.5rem; /* Einheitliche Schriftgröße für den Kontaktbereich */
-    margin: 0.5rem 0; /* Leichter Abstand zwischen den Kontaktinformationen */
-}
-
-.footer-contact a {
-    text-decoration: none; /* Kein Unterstrich für den Kontakt-Link */
-    color: #ccc; /* Einheitliche Linkfarbe */
-}
-
 /* Für kleinere Bildschirme: Links untereinander anordnen */
 @media (max-width: 768px) {
     .footer-content {
@@ -54,15 +43,5 @@ footer {
     .footer-link {
         font-size: 1.6rem; /* Größere Schriftgröße für die Links auf kleineren Geräten */
         padding: 15px 20px; /* Mehr Padding für eine bessere Klickbarkeit */
-    }
-
-    .footer-contact p,
-    .footer-contact a {
-        font-size: 1.6rem; /* Einheitliche Schriftgröße für den Kontaktbereich auf kleineren Geräten */
-    }
-
-    .footer-contact a:hover {
-        background-color: var(--accent-hover); /* Optionaler Hover-Effekt für den Kontakt-Link */
-        transform: translateY(-2px);
     }
 }
