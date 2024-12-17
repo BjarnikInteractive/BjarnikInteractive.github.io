@@ -1,5 +1,5 @@
 /* Changelog und Dev Blog */
-.changelog-container, .dev-blogs-container {
+.changelog-container, .dev-blogs-container .version-date {
     margin-bottom: 3rem;
 }
 /* Dev Blogs */
