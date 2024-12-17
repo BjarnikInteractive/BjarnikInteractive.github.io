@@ -116,6 +116,22 @@
     <p><strong>E-Mail:</strong> <a href="mailto:BjarnikInteractive@gmail.com">BjarnikInteractive@gmail.com</a></p>
   </section>
 
+   <!-- Footer Container -->
   <div id="footer-container"></div>
 
- 
+  <!-- Script to load Navbar and Footer -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
