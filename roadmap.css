@@ -5,6 +5,7 @@
   gap: 2rem; /* Abstand zwischen den Spalten */
   flex-wrap: wrap;
   margin-top: 100px; /* Damit die Navbar nicht verdeckt */
+  transition: margin-top 0.3s ease; /* Sanfter Übergang bei Top Margin */
 }
 
 /* Jede Roadmap-Spalte */
@@ -15,8 +16,14 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   margin-bottom: 2rem;
+  transition: transform 0.3s ease; /* Sanfte Bewegung bei Hover */
 }
 
+.roadmap-column:hover {
+  transform: translateY(-5px); /* Spalten leicht anheben bei Hover */
+}
+
+/* Roadmap-Column Überschrift */
 .roadmap-column h2 {
   font-size: 1.8rem;
   color: #fff; /* Überschrift in Weiß */
@@ -30,6 +37,11 @@
   border-radius: var(--border-radius);
   margin-bottom: 1.2rem;
   box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease; /* Sanfte Bewegung bei Hover */
+}
+
+.roadmap-task-card:hover {
+  transform: translateY(-5px); /* Cards leicht anheben bei Hover */
 }
 
 /* Aufgabenüberschriften in der Farbe der jeweiligen Spalte */
