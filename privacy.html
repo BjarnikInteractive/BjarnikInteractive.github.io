@@ -4,13 +4,33 @@
   <meta charset="UTF-8">
   <title>Privacy Policy / Datenschutzerklärung</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Transition-Effekt für Sections */
+    .section {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover-Effekt für Sections */
+    .section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sprachhinweise */
+    .language-tag {
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--secondary-color);
+        margin-left: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-container"></div>
 
   <!-- Privacy Policy (English) -->
   <section class="section" id="privacy-policy">
-    <h1>Privacy Policy</h1>
+    <h1>Privacy Policy <span class="language-tag">(English)</span></h1>
     <h2>1. General Information</h2>
     <p>We take the protection of your personal data seriously. This Privacy Policy explains what data we collect during the use of our app and how it is processed.</p>
 
@@ -54,7 +74,7 @@
 
   <!-- Datenschutzerklärung (Deutsch) -->
   <section class="section" id="datenschutz">
-    <h1>Datenschutzerklärung</h1>
+    <h1>Datenschutzerklärung <span class="language-tag">(Deutsch)</span></h1>
     <h2>1. Allgemeine Informationen</h2>
     <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung erklärt, welche Daten wir während der Nutzung unserer App erheben und wie sie verarbeitet werden.</p>
 
@@ -98,20 +118,4 @@
 
   <div id="footer-container"></div>
 
-  <script>
-    // Navbar und Footer aus externem HTML laden
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-      });
-
-     fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-          });
-      </script>
-      
-    </body>
-</html>
+ 
