@@ -33,7 +33,7 @@ body {
 /* Überschriften */
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--accent-color);
+    color: var(--accent-color); /* Überschriftenfarbe in Petrol */
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -107,4 +107,9 @@ canvas {
     width: 100%;
     display: block;
     border-radius: var(--border-radius);
+}
+
+.highlight {
+    color: var(--neon-pink);
+    font-weight: bold;
 }
