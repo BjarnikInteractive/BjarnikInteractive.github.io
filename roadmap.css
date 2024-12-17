@@ -1,0 +1,83 @@
+/* Roadmap-Board Container */
+.roadmap-board-container {
+  display: flex;
+  justify-content: space-between; /* Verteilte Spalten */
+  gap: 2rem; /* Abstand zwischen den Spalten */
+  flex-wrap: wrap;
+  margin-top: 100px; /* Damit die Navbar nicht verdeckt */
+}
+
+/* Jede Roadmap-Spalte */
+.roadmap-column {
+  flex: 1; /* Jede Spalte nimmt gleichmäßig Platz ein */
+  padding: 1rem;
+  background-color: #222; /* Dunkler Hintergrund für die Spalten */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.roadmap-column h2 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Roadmap-Task Cards */
+.roadmap-task-card {
+  background-color: #333; /* Dunklere Hintergrundfarbe für die Cards */
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.roadmap-task-card h3 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-bottom: 0.8rem;
+}
+
+.roadmap-task-card p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Farbige Spalten für verschiedene Zustände */
+.red {
+  background-color: #ff4d4d; /* Rote Spalte für "Upcoming" */
+}
+
+.yellow {
+  background-color: #ffcc00; /* Gelbe Spalte für "In Progress" */
+}
+
+.blue {
+  background-color: #3399ff; /* Blaue Spalte für "Future Features" */
+}
+
+.green {
+  background-color: #66cc66; /* Grüne Spalte für "Community Ideas" */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .roadmap-board-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .roadmap-column {
+    flex: none; /* Spalten auf mobile Ansicht stapeln */
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-column {
+    width: 100%;
+  }
+
+  .roadmap-task-card h3 {
+    font-size: 1.2rem;
+  }
+}
