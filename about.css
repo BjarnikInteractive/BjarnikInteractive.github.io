@@ -1,47 +1,54 @@
+/* Allgemeine Container-Stile */
 .about-container {
     display: flex;
     justify-content: space-between;
-}
-
-.about-card {
-    background-color: #282828;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease;
+    gap: 20px; /* Abstand zwischen den beiden Hauptkarten */
+    margin-bottom: 3rem;
 }
 
 .about-us-container {
     margin-top: 2rem;
 }
 
-/* Optional: Styling für spezifische Karten (z.B. game-description, gameplay, development) */
-.game-description ul,
-.gameplay ul {
-    list-style-type: square;
-    margin-left: 20px;
+/* Styling für die Karten */
+.card {
+    background-color: #282828;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+    padding: 1.5rem;
+    flex-basis: 48%; /* Standardbreite für Karten (etwa 50%) */
 }
 
-
-.about-card:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
-.about-card h3 {
+.card h2 {
     font-size: 1.8rem;
     color: var(--accent-color);
 }
 
-.about-card p {
+.card p {
     font-size: 1.1rem;
     color: var(--secondary-color);
 }
 
+.card ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design für kleinere Bildschirme */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
+        gap: 1rem; /* Verkleinert den Abstand zwischen den Karten auf mobilen Geräten */
     }
 
-    .about-card {
-        width: 100%; 
+    .card {
+        width: 100%; /* Karten nehmen die volle Breite auf kleinen Geräten */
     }
 }
