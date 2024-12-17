@@ -6,7 +6,7 @@ footer {
     margin-top: auto;
     border-top: 4px solid var(--accent-color);
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
-    font-size: 1.4rem; /* Größere Schriftgröße für den gesamten Footer */
+    font-size: 1.6rem; /* Noch größere Schriftgröße für den gesamten Footer */
 }
 
 .footer-content {
@@ -24,7 +24,7 @@ footer {
     border-radius: var(--border-radius);
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s;
     display: inline-block;
-    font-size: 1.3rem; /* Größere Schriftgröße für die Links */
+    font-size: 1.5rem; /* Noch größere Schriftgröße für die Links */
 }
 
 .footer-link:hover {
@@ -34,9 +34,30 @@ footer {
 }
 
 .footer-contact p {
-    font-size: 1.3rem; /* Größere Schriftgröße für die Texte im Footer */
+    font-size: 1.5rem; /* Noch größere Schriftgröße für die Texte im Footer */
 }
 
 .footer-contact a {
-    font-size: 1.3rem; /* Größere Schriftgröße für den Kontakt-Link */
+    font-size: 1.5rem; /* Noch größere Schriftgröße für den Kontakt-Link */
+}
+
+/* Für kleinere Bildschirme: Links untereinander anordnen */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Links untereinander statt nebeneinander */
+        gap: 1.5rem; /* Weniger Abstand zwischen den Links */
+    }
+
+    .footer-link {
+        font-size: 1.6rem; /* Größere Schriftgröße für die Links auf kleineren Geräten */
+        padding: 15px 20px; /* Mehr Padding für eine bessere Klickbarkeit */
+    }
+
+    .footer-contact p {
+        font-size: 1.6rem; /* Größere Schriftgröße für die Texte auf kleineren Geräten */
+    }
+
+    .footer-contact a {
+        font-size: 1.6rem; /* Größere Schriftgröße für den Kontakt-Link auf kleineren Geräten */
+    }
 }
