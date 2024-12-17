@@ -12,8 +12,15 @@
 }
 
 main {
-    padding: 0 15rem;
+    padding: 0; 
 }
+
+@media (min-width: 1024px) {
+    main {
+        padding: 0 15rem;
+    }
+}
+
 
 body {
     font-family: Arial, sans-serif;
