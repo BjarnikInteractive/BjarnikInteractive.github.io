@@ -66,10 +66,9 @@ body {
   margin: 5px 0;
 }
 
-/* Mobile Ansicht: Hamburger-Menü aktivieren */
 @media (max-width: 768px) {
   .navbar ul {
-    display: none;
+    display: none; /* Standardmäßig ausgeblendet */
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -81,7 +80,7 @@ body {
   }
 
   .navbar ul.active {
-    display: flex; /* Menü wird angezeigt, wenn 'active' Klasse hinzugefügt wird */
+    display: flex;
   }
 
   .navbar ul li {
