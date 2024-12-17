@@ -11,6 +11,18 @@
     --link-hover-color: #1abc9c;    /* Petrol für Links */
 }
 
+main {
+    padding: 0 20px; /* Abstand links und rechts */
+}
+
+.roadmap-board-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    padding: 0 20px; /* Abstand links und rechts */
+}
+
 /* Allgemeine Struktur */
 body {
     font-family: Arial, sans-serif;
