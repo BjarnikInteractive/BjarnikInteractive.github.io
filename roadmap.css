@@ -4,7 +4,7 @@
   justify-content: space-between; /* Verteilte Spalten */
   gap: 2rem; /* Abstand zwischen den Spalten */
   flex-wrap: wrap;
-  margin-top: 100px; /* Damit die Navbar nicht verdeckt */
+  margin-top: 30px; /* Reduzierter Abstand unter dem Project Roadmap */
   transition: margin-top 0.3s ease; /* Sanfter Übergang bei Top Margin */
 }
 
